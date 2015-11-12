@@ -1,0 +1,101 @@
+A Vectorized Implementation of the Tersoff Potential 
+    for the LAMMPS Molecular Dynamics Software
+====================================================
+
+Author: Markus Höhnerbach <hoehnerbach@aices.rwth-aachen.de>
+Date: 12 Nov 2015
+
+This project provides the source code of a vectorized
+implementation of the Tersoff potential.
+We target both host processors with conventional vector
+instruction sets such as SSE, AVX and AVX2, and the
+Xeon Phi (Knight's Corner) coprocessor.
+There is experimental support for AVX-512 and a
+platform-agnostic vectorization through the Cilk array
+notation.
+
+Supported compilers: ICC 15.0 or 16.0
+Supported MPI: Intel MPI
+
+The code builts upon the existing Xeon Phi support and
+vectorization capabilities of the USER-INTEL LAMMPS
+package.
+
+Installation
+------------
+
+To try this code out, download LAMMPS from lammps.sandia.gov,
+and extract the files to some directory $LAMMPS_DIR.
+In the following, $THIS denotes the directory where this
+README is located.
+You need to enable the packages MANYBODY, USER-OMP and USER-INTEL:
+
+$ cd $LAMMPS_DIR/src
+$ make yes-MANYBODY yes-USER-OMP yes-USER-INTEL
+
+Copy the files pair_tersoff_intel.h, pair_tersoff_intel.cpp
+and intel_intrinsics.h from $THIS/src/ to $LAMMPS_DIR/src.
+
+Build LAMMPS (make sure to have ICC with offloading support
+and Intel MPI loaded):
+
+$ make intel_phi
+
+This creates a binary $LAMMPS_DIR/src/lmp_intel_phi.
+
+Testing
+-------
+
+To test this binary, use the provided test-script:
+
+$ cd $THIS/test
+$ python test.py $LAMMPS_DIR/src/lmp_intel_phi
+
+All the tests should turn green.
+
+Usage
+-----
+
+For further usage instructions, please have a look at
+the documentation of the USER-INTEL package.
+The code neatly plugs into that framework, all you need
+to do is
+1. specify the correct "package intel" command according
+   to the USER-INTEL docs, to initialize the correct usage
+   mode.
+2. use the Tersoff potential and set the suffix to "intel"
+
+Getting Started
+---------------
+
+If you just want to try out the code and make some
+obvservations on its performance, the easiest way to do so
+is to download the LAMMPS-provided benchmark for the Tersoff
+potential, and pass the correct options via the command line.
+
+$ http://lammps.sandia.gov/bench/bench_tersoff.tar.gz
+$ tar xfz bench_tersoff.tar.gz
+$ cd tersoff
+$ $LAMMPS_DIR/src/lmp_intel_phi -in in.tersoff -pk omp 0 \
+-pk intel 1 balance $BALANCE mode $MODE -sf intel
+
+1. Choose $MODE as either single, double or mixed depending 
+   on the precision you want the run to use.
+2. Choose $BALANCE according to where you want to run:
+   0 runs everything on the host, 1 everything on the Phi,
+   values in between split the computation. -1 will perform
+   automatic load balancing.
+
+Limitations
+-----------
+
+The code currently is limited to compilation with Intel MPI
+and ICC version 15.0 or 16.0.
+It inherits all the limitations inherent to the USER-INTEL
+package, please look at that documentation for details.
+
+License
+-------
+
+The code is licensed in accordance with the LAMMPS copyright 
+under the GNU General Public License Version 2 onwards.
