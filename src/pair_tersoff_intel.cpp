@@ -29,6 +29,31 @@
 #include "memory.h"
 #include "error.h"
 
+// Currently Intel compiler is required for this pair style.
+// For convenience, base class routines are called if not using Intel compiler.
+#ifndef __INTEL_COMPILER
+using namespace LAMMPS_NS;
+
+PairTersoffIntel::PairTersoffIntel(LAMMPS *lmp) : PairTersoff(lmp)
+{
+}
+
+void PairTersoffIntel::compute(int eflag, int vflag)
+{
+  PairTersoff::compute(eflag, vflag);
+}
+
+void PairTersoffIntel::init_style()
+{
+  if (comm->me == 0) {
+    error->warning(FLERR, "Tersoff/intel currently requires intel compiler. "
+		   "Using MANYBODY version.");
+  }
+  PairTersoff::init_style();
+}
+
+#else
+
 #ifdef _LMP_INTEL_OFFLOAD
 #pragma offload_attribute(push,target(mic))
 #endif
@@ -359,12 +384,18 @@ void PairTersoffIntel::eval(const int offload, const int vflag,
           }
         }
       }
-      #if defined(_OPENMP)
-      #pragma omp barrier
+
+      #ifndef _LMP_INTEL_OFFLOAD
+      if (vflag == 2)
       #endif
-      IP_PRE_fdotr_acc_force(NEWTON_PAIR, EVFLAG,  EFLAG, vflag, eatom, nall,
-			     nlocal, minlocal, nthreads, f_start, f_stride, 
-			     x);
+      {
+        #if defined(_OPENMP)
+        #pragma omp barrier
+        #endif
+        IP_PRE_fdotr_acc_force(NEWTON_PAIR, EVFLAG,  EFLAG, vflag, eatom, nall,
+	  		       nlocal, minlocal, nthreads, f_start, f_stride, 
+                               x, offload);
+      }
     } // end of omp parallel region
     if (EVFLAG) {
       if (EFLAG) {
@@ -394,7 +425,7 @@ void PairTersoffIntel::eval(const int offload, const int vflag,
     fix->stop_watch(TIME_HOST_PAIR);
 
   if (EVFLAG)
-    fix->add_result_array(f_start, ev_global, offload, eatom);
+    fix->add_result_array(f_start, ev_global, offload, eatom, 0, vflag);
   else
     fix->add_result_array(f_start, 0, offload);
 
@@ -430,15 +461,12 @@ void PairTersoffIntel::init_style()
   _cop = fix->coprocessor_number();
   #endif
   if (fix->precision() == FixIntel::PREC_MODE_MIXED) {
-    fix->get_mixed_buffers()->free_all_nbor_buffers();
     pack_force_const(force_const_single, fix->get_mixed_buffers());
     fix->get_mixed_buffers()->need_tag(1);
   } else if (fix->precision() == FixIntel::PREC_MODE_DOUBLE) {
-    fix->get_double_buffers()->free_all_nbor_buffers();
     fix->get_double_buffers()->need_tag(1);
     pack_force_const(force_const_double, fix->get_double_buffers());
   } else {
-    fix->get_single_buffers()->free_all_nbor_buffers();
     pack_force_const(force_const_single, fix->get_single_buffers());
     fix->get_single_buffers()->need_tag(1);
   }
@@ -1471,4 +1499,6 @@ void IntelKernelTersoff<flt_t,acc_t,mic, pack_i>::attractive_vector(
 
 #ifdef _LMP_INTEL_OFFLOAD
 #pragma offload_attribute(pop)
+#endif
+
 #endif
