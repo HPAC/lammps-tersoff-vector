@@ -359,6 +359,7 @@ void PairTersoffIntel::eval(const int offload, const int vflag,
         sevdwl = sv0 = sv1 = sv2 = sv3 = sv4 = sv5 = 0.;
         #define ARGS iito, iifrom, eatom, vflag, numneigh, numneighhalf, cnumneigh, \
           firstneigh, ntypes, x, c_inner, c_outer, f, &sevdwl, &sv0, &sv1, &sv2, &sv3, &sv4, &sv5
+        #ifndef LMP_INTEL_TERSOFF_PACK_I
         // Pick the variable i algorithm under specific conditions
         // do use scalar algorithm with very short vectors
         int VL = lmp_intel::vector_routines<flt_t,acc_t,lmp_intel::mode>::VL;
@@ -372,6 +373,9 @@ void PairTersoffIntel::eval(const int offload, const int vflag,
         } else {
           IntelKernelTersoff<flt_t,acc_t,lmp_intel::mode,false>::kernel<EVFLAG,EFLAG>(ARGS);
         }
+        #else
+        IntelKernelTersoff<flt_t,acc_t,lmp_intel::mode,LMP_INTEL_TERSOFF_PACK_I>::kernel<EVFLAG,EFLAG>(ARGS);
+        #endif
 	if (EVFLAG) {
           if (EFLAG) oevdwl += sevdwl;
           if (vflag == 1) {
