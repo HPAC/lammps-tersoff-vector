@@ -3,26 +3,58 @@ A Vectorized Implementation of the Tersoff Potential
 ====================================================
 
 Author: Markus Höhnerbach <hoehnerbach@aices.rwth-aachen.de>
-Date: 12 Nov 2015
+Date:  4 Aug 2016
 
 This project provides the source code of a vectorized
 implementation of the Tersoff potential.
-We target both host processors with conventional vector
-instruction sets such as SSE, AVX and AVX2, and the
-Xeon Phi (Knight's Corner) coprocessor.
-There is experimental support for AVX-512 and a
-platform-agnostic vectorization through the Cilk array
-notation.
+We target a variety of processors with conventional vector
+instruction sets such as NEON, SSE, AVX, and AVX2, the first 
+and second generation of the Xeon Phi accelerator, as well 
+as NVIDIA GPUs.
+There is experimental support for platform-agnostic 
+vectorization through the Cilk array notation.
 
-Supported compilers: ICC 15.0 or 16.0
+Supported compilers: ICC 14.0, 15.0 or 16.0, GCC (ARM)
 Supported MPI: Intel MPI
 
 The code builts upon the existing Xeon Phi support and
 vectorization capabilities of the USER-INTEL LAMMPS
-package.
+package as well as the GPU support from the KOKKOS package.
 
-Installation
-------------
+Overview
+--------
+
+benchmarks/
+  vect/
+    very simple benchmark to measure vect. efficiency.
+  lammps/
+    input files, parameter files and scripts to conduct
+    benchmarking and accuracy tests. Subfolders contain
+    results from real-world systems.
+machines/
+  lammps-10Mar16/
+    complete lammps source code that is certain to work
+    with the provided source code.
+  <a>-<b>_<c>/
+    folder to build lammps on a specific system. Names:
+    a = organization, b = CPU arch, c = accelerator.
+    These folders contain a build.sh script that shows
+    how to build binaries to experiment with on a given
+    system.
+src/
+  The core source code that contains the vectorized
+  Tersoff potential. Can be dropped into an existing
+  LAMMPS install with USER-INTEL package installed,
+  and should just work.
+test/
+  Contains a script to test the code against bothh the
+  benchmark and randomly generated systems of multiple
+  species. Invoke the python script with the binary
+  that you would like to test. For now only works with
+  the USER-INTEL package.
+
+Installation (simple)
+---------------------
 
 To try this code out, download LAMMPS from lammps.sandia.gov,
 and extract the files to some directory $LAMMPS_DIR.
@@ -43,8 +75,8 @@ $ make intel_phi
 
 This creates a binary $LAMMPS_DIR/src/lmp_intel_phi.
 
-Testing
--------
+Testing (simple)
+----------------
 
 To test this binary, use the provided test-script:
 
@@ -86,16 +118,39 @@ $ $LAMMPS_DIR/src/lmp_intel_phi -in in.tersoff -pk omp 0 \
    values in between split the computation. -1 will perform
    automatic load balancing.
 
+In-Depth Benchmarking
+---------------------
+
+For in-depth benchmarking, build all the binaries that you
+would like to investigate (machines/*/build.sh show how to
+build a variety of targets).
+For single-node benchmarking, benchmarks/lammps contains
+shell scripts to conduct a number of experiments.
+For multi-node benchmarking, machines/lrz-ib_phi contains
+a python script to showcase how to create job-scripts to
+be submitted to a batch system.
+If you can't run the code on suitable machines, check out
+the result folders, i.e. benchmarks/lammps/results* and
+machines/lrz-ib_phi/run*, as they contain real-world data
+from a selection of machines.
+
 Limitations
 -----------
 
-The code currently is limited to compilation with Intel MPI
-and ICC version 15.0 or 16.0.
 It inherits all the limitations inherent to the USER-INTEL
-package, please look at that documentation for details.
+package or the KOKKOS package, please look at that documentation 
+for details.
+
+Reference
+---------
+
+There is a preprint describing this work on arXiv.org:
+https://arxiv.org/abs/1607.02904
 
 License
 -------
 
 The code is licensed in accordance with the LAMMPS copyright 
 under the GNU General Public License Version 2 onwards.
+The vector math functions in vector_math_neon.h are copyrighted
+by Julien Pommier under the zlib license.
