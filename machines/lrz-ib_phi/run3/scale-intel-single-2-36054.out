@@ -1,0 +1,106 @@
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13a09-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+i01r13c04-ib
+LAMMPS (10 Mar 2016)
+  using 1 OpenMP thread(s) per MPI task
+Intel Package: Affinitizing MPI Tasks to 2 Cores Each
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (434.48 434.48 217.24)
+  4 by 4 by 2 MPI processor grid
+Created 2048000 atoms
+----------------------------------------------------------
+Using Intel Package without Coprocessor.
+Precision: single
+----------------------------------------------------------
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 207 207 104
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 284.327 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -9483766.1            0   -9219041.5    7023.4022 
+     100    428.48394   -9331639.8            0   -9218209.5   -14377.891 
+     200    543.53541   -9362087.5            0   -9218200.3   -1841.8976 
+     300    493.27996   -9348764.8            0   -9218181.4   -3966.1699 
+     400    496.78519   -9349688.9            0   -9218177.6    -2856.812 
+     500    483.52033   -9346172.2            0   -9218172.5   -3004.9688 
+     600    469.36545   -9342424.2            0   -9218171.6   -4805.6049 
+     700    498.18767     -9350055            0   -9218172.4    -2261.703 
+     800    486.45956   -9346952.8            0   -9218174.9   -3723.0667 
+     900    491.00759   -9348156.5            0   -9218174.7   -2992.1838 
+    1000    480.84036   -9345464.1            0   -9218173.8   -3904.0075 
+    1100    489.60034     -9347780            0   -9218170.7   -3212.9355 
+    1200    490.14813     -9347922            0   -9218167.7   -3105.6609 
+    1300    486.96964   -9347081.8            0     -9218169   -3489.5243 
+    1400    487.18137   -9347134.6            0   -9218165.7   -3282.1745 
+    1500    486.81301   -9347038.7            0   -9218167.3   -3450.1523 
+    1600    488.85226   -9347575.2            0     -9218164    -3140.908 
+    1700    487.99516   -9347349.4            0     -9218165   -3302.3892 
+    1800    486.22995   -9346881.7            0   -9218164.7   -3393.6458 
+    1900    488.80594   -9347560.5            0   -9218161.5   -3153.8625 
+    2000    486.13368   -9346853.1            0   -9218161.5   -3410.4827 
+Loop time of 368.844 on 32 procs for 2000 steps with 2048000 atoms
+
+Performance: 0.468 ns/day, 51.228 hours/ns, 5.422 timesteps/s
+99.7% CPU use with 32 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 134.52     | 245.92     | 323.4      | 202.6 | 66.67
+Neigh   | 6.6507     | 6.725      | 8.0077     |   9.5 |  1.82
+Comm    | 22.657     | 75.055     | 222.95     | 567.3 | 20.35
+Output  | 0.011757   | 0.44884    | 1.0132     |  73.7 |  0.12
+Modify  | 1.2266     | 2.3128     | 3.1239     |  36.8 |  0.63
+Other   |            | 38.38      |            |       | 10.41
+
+Nlocal:    64000 ave 64131 max 63882 min
+Histogram: 1 4 6 4 2 4 3 5 0 3
+Nghost:    17069.6 ave 17172 max 16946 min
+Histogram: 2 0 1 3 5 9 4 5 1 2
+Neighs:    0 ave 0 max 0 min
+Histogram: 32 0 0 0 0 0 0 0 0 0
+FullNghs:  1.05506e+06 ave 1.05774e+06 max 1.0523e+06 min
+Histogram: 1 3 3 7 5 1 3 4 2 3
+
+Total # of neighbors = 33761888
+Ave neighs/atom = 16.4853
+Neighbor list builds = 76
+Dangerous builds = 0
+Total wall time: 0:06:12

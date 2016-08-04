@@ -1,0 +1,1595 @@
+*** glibc detected *** ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector: malloc(): memory corruption: 0x00002b9df459fe10 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x76628)[0x2b9df42a3628]
+/lib64/libc.so.6(+0x795df)[0x2b9df42a65df]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2b9df42a86b7]
+/usr/lib64/libstdc++.so.6(_Znwm+0x1d)[0x2b9df3d7408d]
+/usr/lib64/libcoi_host.so.0(+0x214d1)[0x2b9df5dbf4d1]
+/usr/lib64/libcoi_host.so.0(+0x1edb5)[0x2b9df5dbcdb5]
+/usr/lib64/libcoi_host.so.0(+0x1a7a2)[0x2b9df5db87a2]
+/usr/lib64/libcoi_host.so.0(COIBufferSetState+0x16b)[0x2b9df5daf78b]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x17ea2)[0x2b9df38abea2]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x11d3a)[0x2b9df38a5d3a]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x101c7)[0x2b9df38a41c7]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0xf98c)[0x2b9df38a398c]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(__offload_offload1+0x52)[0x2b9df38b5792]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7759ac]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x88a583]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x822c53]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x80a0e2]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x1189bff]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x114a35c]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x76aea9]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7636d5]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x760a87]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x787ab1]
+/lib64/libc.so.6(__libc_start_main+0xe6)[0x2b9df424bc36]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x40a119]
+======= Memory map: ========
+00400000-01d42000 r-xp 00000000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f42000-01f44000 r-xp 01942000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f44000-0200d000 rwxp 01944000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+0200d000-020c0000 rwxp 00000000 00:00 0                                  [heap]
+020c0000-020c1000 rwxp 00000000 00:00 0                                  [heap]
+020c1000-020c2000 rwxp 00000000 00:00 0                                  [heap]
+020c2000-020c3000 rwxp 00000000 00:00 0                                  [heap]
+020c3000-020c4000 rwxp 00000000 00:00 0                                  [heap]
+020c4000-020c5000 rwxp 00000000 00:00 0                                  [heap]
+020c5000-020c6000 rwxp 00000000 00:00 0                                  [heap]
+020c6000-020c7000 rwxp 00000000 00:00 0                                  [heap]
+020c7000-020c8000 rwxp 00000000 00:00 0                                  [heap]
+020c8000-020c9000 rwxp 00000000 00:00 0                                  [heap]
+020c9000-021c6000 rwxp 00000000 00:00 0                                  [heap]
+021c6000-021c7000 rwxp 00000000 00:00 0                                  [heap]
+021c7000-021c8000 rwxp 00000000 00:00 0                                  [heap]
+021c8000-021c9000 rwxp 00000000 00:00 0                                  [heap]
+021c9000-021ca000 rwxp 00000000 00:00 0                                  [heap]
+021ca000-021cb000 rwxp 00000000 00:00 0                                  [heap]
+021cb000-021cd000 rwxp 00000000 00:00 0                                  [heap]
+021cd000-021ce000 rwxp 00000000 00:00 0                                  [heap]
+021ce000-021cf000 rwxp 00000000 00:00 0                                  [heap]
+021cf000-021d0000 rwxp 00000000 00:00 0                                  [heap]
+021d0000-021d1000 rwxp 00000000 00:00 0                                  [heap]
+021d1000-021d2000 rwxp 00000000 00:00 0                                  [heap]
+021d2000-021d3000 rwxp 00000000 00:00 0                                  [heap]
+021d3000-021d4000 rwxp 00000000 00:00 0                                  [heap]
+021d4000-021d5000 rwxp 00000000 00:00 0                                  [heap]
+021d5000-021d6000 rwxp 00000000 00:00 0                                  [heap]
+021d6000-021d7000 rwxp 00000000 00:00 0                                  [heap]
+021d7000-021d8000 rwxp 00000000 00:00 0                                  [heap]
+021d8000-021d9000 rwxp 00000000 00:00 0                                  [heap]
+021d9000-0225a000 rwxp 00000000 00:00 0                                  [heap]
+0225a000-0225b000 rwxp 00000000 00:00 0                                  [heap]
+0225b000-022dc000 rwxp 00000000 00:00 0                                  [heap]
+022dc000-022dd000 rwxp 00000000 00:00 0                                  [heap]
+022dd000-0235e000 rwxp 00000000 00:00 0                                  [heap]
+0235e000-025f2000 rwxp 00000000 00:00 0                                  [heap]
+025f2000-025f3000 rwxp 00000000 00:00 0                                  [heap]
+025f3000-025f4000 rwxp 00000000 00:00 0                                  [heap]
+025f4000-025f5000 rwxp 00000000 00:00 0                                  [heap]
+025f5000-02fcd000 rwxp 00000000 00:00 0                                  [heap]
+02fcd000-03134000 rwxp 00000000 00:00 0                                  [heap]
+03134000-03f79000 rwxp 00000000 00:00 0                                  [heap]
+03f79000-03ffa000 rwxp 00000000 00:00 0                                  [heap]
+03ffa000-03ffb000 rwxp 00000000 00:00 0                                  [heap]
+03ffb000-0409c000 rwxp 00000000 00:00 0                                  [heap]
+0409c000-0409d000 rwxp 00000000 00:00 0                                  [heap]
+0409d000-0413e000 rwxp 00000000 00:00 0                                  [heap]
+0413e000-0595c000 rwxp 00000000 00:00 0                                  [heap]
+0595c000-05eab000 rwxp 00000000 00:00 0                                  [heap]
+05eab000-05ecc000 rwxp 00000000 00:00 0                                  [heap]
+2aaaaaab0000-2aaaaaab8000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaab8000-2aaaaaac0000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaac0000-2aaaaaae2000 rwxs 01202000 00:10 78481                      /dev/infiniband/uverbs0
+2b9dee213000-2b9dee232000 r-xp 00000000 00:10 43096                      /lib64/ld-2.11.3.so
+2b9dee232000-2b9dee234000 rwxp 00000000 00:00 0 
+2b9dee431000-2b9dee432000 r-xp 0001e000 00:10 43096                      /lib64/ld-2.11.3.so
+2b9dee432000-2b9dee433000 rwxp 0001f000 00:10 43096                      /lib64/ld-2.11.3.so
+2b9dee433000-2b9dee434000 rwxp 00000000 00:00 0 
+2b9dee434000-2b9deeb19000 r-xp 00000000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9deeb19000-2b9deed19000 ---p 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9deed19000-2b9deed1a000 r-xp 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9deed1a000-2b9deed2a000 rwxp 006e6000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9deed2a000-2b9deed2f000 rwxp 00000000 00:00 0 
+2b9deed2f000-2b9deffeb000 r-xp 00000000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9deffeb000-2b9df01eb000 ---p 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9df01eb000-2b9df01ec000 r-xp 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9df01ec000-2b9df037e000 rwxp 012bd000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9df037e000-2b9df0384000 rwxp 00000000 00:00 0 
+2b9df0384000-2b9df1a91000 r-xp 00000000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9df1a91000-2b9df1c90000 ---p 0170d000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9df1c90000-2b9df1c98000 r-xp 0170c000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9df1c98000-2b9df1cb9000 rwxp 01714000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9df1cb9000-2b9df1d0b000 rwxp 00000000 00:00 0 
+2b9df1d15000-2b9df1d16000 rwxp 00000000 00:00 0 
+2b9df1d16000-2b9df1d38000 r-xp 00000000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9df1d38000-2b9df1f38000 ---p 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9df1f38000-2b9df1f39000 r-xp 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9df1f39000-2b9df1f3a000 rwxp 00023000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9df1f3a000-2b9df2044000 r-xp 00000000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9df2044000-2b9df2243000 ---p 0010a000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9df2243000-2b9df2245000 r-xp 00109000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9df2245000-2b9df224e000 rwxp 0010b000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9df224e000-2b9df227b000 rwxp 00000000 00:00 0 
+2b9df227b000-2b9df2292000 r-xp 00000000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9df2292000-2b9df2492000 ---p 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9df2492000-2b9df2493000 r-xp 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9df2493000-2b9df2494000 rwxp 00018000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9df2494000-2b9df2499000 rwxp 00000000 00:00 0 
+2b9df2499000-2b9df24f4000 r-xp 00000000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9df24f4000-2b9df26f3000 ---p 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9df26f3000-2b9df26f4000 r-xp 0005a000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9df26f4000-2b9df2712000 rwxp 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9df2712000-2b9df2730000 r-xp 00000000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b9df2730000-2b9df292f000 ---p 0001e000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b9df292f000-2b9df2932000 rwxp 0001d000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b9df2932000-2b9df2a98000 r-xp 00000000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b9df2a98000-2b9df2c98000 ---p 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b9df2c98000-2b9df2c9f000 rwxp 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b9df2c9f000-2b9df2cc4000 rwxp 00000000 00:00 0 
+2b9df2cc4000-2b9df3201000 r-xp 00000000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b9df3201000-2b9df3401000 ---p 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b9df3401000-2b9df3433000 rwxp 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b9df3433000-2b9df3486000 rwxp 00000000 00:00 0 
+2b9df3486000-2b9df3488000 r-xp 00000000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9df3488000-2b9df3688000 ---p 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9df3688000-2b9df3689000 r-xp 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9df3689000-2b9df368a000 rwxp 00003000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9df368a000-2b9df3692000 r-xp 00000000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9df3692000-2b9df3891000 ---p 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9df3891000-2b9df3892000 r-xp 00007000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9df3892000-2b9df3893000 rwxp 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9df3893000-2b9df3894000 rwxp 00000000 00:00 0 
+2b9df3894000-2b9df38cd000 r-xp 00000000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b9df38cd000-2b9df3acc000 ---p 00039000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b9df3acc000-2b9df3ace000 rwxp 00038000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b9df3ace000-2b9df3acf000 rwxp 00000000 00:00 0 
+2b9df3acf000-2b9df3b0b000 r-xp 00000000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9df3b0b000-2b9df3d0a000 ---p 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9df3d0a000-2b9df3d0b000 r-xp 0003b000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9df3d0b000-2b9df3d0d000 rwxp 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9df3d0d000-2b9df3d10000 rwxp 00000000 00:00 0 
+2b9df3d10000-2b9df3df8000 r-xp 00000000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9df3df8000-2b9df3ff7000 ---p 000e8000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9df3ff7000-2b9df3fff000 r-xp 000e7000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9df3fff000-2b9df4001000 rwxp 000ef000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9df4001000-2b9df4017000 rwxp 00000000 00:00 0 
+2b9df4017000-2b9df402c000 r-xp 00000000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9df402c000-2b9df422b000 ---p 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9df422b000-2b9df422c000 r-xp 00014000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9df422c000-2b9df422d000 rwxp 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9df422d000-2b9df439b000 r-xp 00000000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9df439b000-2b9df459a000 ---p 0016e000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9df459a000-2b9df459e000 r-xp 0016d000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9df459e000-2b9df459f000 rwxp 00171000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9df459f000-2b9df45a5000 rwxp 00000000 00:00 0 
+2b9df45a5000-2b9df481f000 r-xp 00000000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b9df481f000-2b9df4a1e000 ---p 0027a000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b9df4a1e000-2b9df4a60000 rwxp 00279000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b9df4a60000-2b9df56fc000 r-xp 00000000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b9df56fc000-2b9df58fb000 ---p 00c9c000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b9df58fb000-2b9df5933000 rwxp 00c9b000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b9df5933000-2b9df5938000 r-xp 00000000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b9df5938000-2b9df5b38000 ---p 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b9df5b38000-2b9df5b3a000 rwxp 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b9df5b3a000-2b9df5b3b000 rwxp 00000000 00:00 0 
+2b9df5b3b000-2b9df5b97000 r-xp 00000000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b9df5b97000-2b9df5d96000 ---p 0005c000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b9df5d96000-2b9df5d98000 rwxp 0005b000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b9df5d98000-2b9df5d9e000 rwxp 00000000 00:00 0 
+2b9df5d9e000-2b9df5e10000 r-xp 00000000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b9df5e10000-2b9df6010000 ---p 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b9df6010000-2b9df6014000 rwxp 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b9df6014000-2b9df6023000 rwxp 00000000 00:00 0 
+2b9df6023000-2b9df6025000 r-xp 00000000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b9df6025000-2b9df6224000 ---p 00002000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b9df6224000-2b9df6225000 rwxp 00001000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b9df6225000-2b9df6226000 ---p 00000000 00:00 0 
+2b9df6226000-2b9df6426000 rwxp 00000000 00:00 0 
+2b9df6430000-2b9df643c000 r-xp 00000000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9df643c000-2b9df663b000 ---p 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9df663b000-2b9df663c000 r-xp 0000b000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9df663c000-2b9df663d000 rwxp 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9df663d000-2b9df6651000 r-xp 00000000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9df6651000-2b9df6850000 ---p 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9df6850000-2b9df6851000 r-xp 00013000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9df6851000-2b9df6852000 rwxp 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9df6852000-2b9df685e000 rwxp 00000000 00:00 0 
+2b9df685e000-2b9df68a4000 r-xp 00000000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9df68a4000-2b9df6aa4000 ---p 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9df6aa4000-2b9df6aa5000 r-xp 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9df6aa5000-2b9df6aa7000 rwxp 00047000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9df6aa7000-2b9df6ab5000 r-xp 00000000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9df6ab5000-2b9df6cb4000 ---p 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9df6cb4000-2b9df6cb5000 r-xp 0000d000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9df6cb5000-2b9df6cb6000 rwxp 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9df6cb6000-2b9df6ccf000 r-xp 00000000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9df6ccf000-2b9df6ecf000 ---p 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9df6ecf000-2b9df6ed0000 r-xp 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9df6ed0000-2b9df6ed1000 rwxp 0001a000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9df6ed1000-2b9df6f6f000 r-xp 00000000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9df6f6f000-2b9df716e000 ---p 0009e000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9df716e000-2b9df7171000 r-xp 0009d000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9df7171000-2b9df7173000 rwxp 000a0000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9df7173000-2b9df7176000 r-xp 00000000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9df7176000-2b9df7375000 ---p 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9df7375000-2b9df7376000 r-xp 00002000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9df7376000-2b9df7377000 rwxp 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9df7377000-2b9df73a2000 r-xp 00000000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9df73a2000-2b9df75a2000 ---p 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9df75a2000-2b9df75a3000 r-xp 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9df75a3000-2b9df75a4000 rwxp 0002c000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9df75a4000-2b9df75b9000 r-xp 00000000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9df75b9000-2b9df77b8000 ---p 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9df77b8000-2b9df77b9000 r-xp 00014000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9df77b9000-2b9df77ba000 rwxp 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9df77ba000-2b9df77bc000 rwxp 00000000 00:00 0 
+2b9df77bc000-2b9df77cf000 r-xp 00000000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9df77cf000-2b9df79cf000 ---p 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9df79cf000-2b9df79d0000 r-xp 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9df79d0000-2b9df79d1000 rwxp 00014000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9df79d1000-2b9df79d3000 rwxp 00000000 00:00 0 
+2b9df79d3000-2b9df7a22000 r-xp 00000000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9df7a22000-2b9df7c21000 ---p 0004f000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9df7c21000-2b9df7c23000 r-xp 0004e000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9df7c23000-2b9df7c29000 rwxp 00050000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9df7c29000-2b9df7d9c000 r-xp 00000000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9df7d9c000-2b9df7f9b000 ---p 00173000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9df7f9b000-2b9df7fab000 r-xp 00172000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9df7fab000-2b9df7fc4000 rwxp 00182000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9df7fc4000-2b9df7fc8000 rwxp 00000000 00:00 0 
+2b9df7fc8000-2b9df7fec000 r-xp 00000000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9df7fec000-2b9df81eb000 ---p 00024000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9df81eb000-2b9df81ed000 r-xp 00023000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9df81ed000-2b9df81ee000 rwxp 00025000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9df81ee000-2b9df81f5000 r-xp 00000000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9df81f5000-2b9df83f5000 ---p 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9df83f5000-2b9df83f6000 r-xp 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9df83f6000-2b9df83f7000 rwxp 00008000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9df83f7000-2b9df83f9000 r-xp 00000000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9df83f9000-2b9df85f8000 ---p 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9df85f8000-2b9df85f9000 r-xp 00001000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9df85f9000-2b9df85fa000 rwxp 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9df85fa000-2b9df860f000 r-xp 00000000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9df860f000-2b9df880e000 ---p 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9df880e000-2b9df880f000 r-xp 00014000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9df880f000-2b9df8810000 rwxp 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9df8810000-2b9e00011000 rwxs 00000000 00:12 47104767                   /dev/shm/Intel_MPI_uzLnLQ (deleted)
+2b9e00011000-2b9e00012000 -w-s 101ffa54000 00:10 78481                   /dev/infiniband/uverbs0
+2b9e00012000-2b9e00013000 -w-s 101ffe54000 00:10 78481                   /dev/infiniband/uverbs0
+2b9e00013000-2b9e00015000 rwxp 00000000 00:00 0 
+2b9e0001b000-2b9e00025000 r-xp 00000000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9e00025000-2b9e00225000 ---p 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9e00225000-2b9e00226000 r-xp 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9e00226000-2b9e00227000 rwxp 0000b000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9e00227000-2b9e0024b000 r-xp 00000000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9e0024b000-2b9e0044a000 ---p 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9e0044a000-2b9e0044b000 r-xp 00023000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9e0044b000-2b9e0044c000 rwxp 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9e0044c000-2b9e0045f000 r-xp 00000000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9e0045f000-2b9e0065f000 ---p 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9e0065f000-2b9e00660000 r-xp 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9e00660000-2b9e00661000 rwxp 00014000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9e00661000-2b9e006ad000 r-xp 00000000 00:10 43186                      /lib64/libnl.so.1.1
+2b9e006ad000-2b9e008ad000 ---p 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b9e008ad000-2b9e008ae000 r-xp 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b9e008ae000-2b9e008b3000 rwxp 0004d000 00:10 43186                      /lib64/libnl.so.1.1
+2b9e008b3000-2b9e008b6000 r-xp 00000000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9e008b6000-2b9e00ab5000 ---p 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9e00ab5000-2b9e00ab6000 r-xp 00002000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9e00ab6000-2b9e00ab7000 rwxp 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9e00ab7000-2b9e00ac5000 r-xp 00000000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9e00ac5000-2b9e00cc5000 ---p 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9e00cc5000-2b9e00cc6000 r-xp 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9e00cc6000-2b9e00cc7000 rwxp 0000f000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9e00cc7000-2b9e00d8f000 rwxp 00000000 00:00 0 
+2b9e00da0000-2b9e00dc0000 rwxs 01102000 00:10 78481                      /dev/infiniband/uverbs0
+2b9e00dc0000-2b9e0101c000 rwxp 00000000 00:00 0 
+2b9e0101c000-2b9e0101d000 ---p 00000000 00:00 0 
+2b9e0101d000-2b9e0121d000 rwxp 00000000 00:00 0 
+2b9e0194a000-2b9e0194b000 ---p 00000000 00:00 0 
+2b9e0194b000-2b9e01b4b000 rwxp 00000000 00:00 0 
+2b9e01b4b000-2b9e01b4c000 rwxs 00000000 00:04 47018621                   /dev/zero (deleted)
+2b9e01b4c000-2b9e01b55000 rwxs 00000000 00:04 47018622                   /dev/zero (deleted)
+2b9e01b55000-2b9e01b56000 ---p 00000000 00:00 0 
+2b9e01b56000-2b9e01d56000 rwxp 00000000 00:00 0 
+2b9e01d56000-2b9e01d57000 rwxs 00000000 00:04 47018623                   /dev/zero (deleted)
+2b9e01d57000-2b9e01d58000 ---p 00000000 00:00 0 
+2b9e01d58000-2b9e01f58000 rwxp 00000000 00:00 0 
+2b9e02685000-2b9e02686000 ---p 00000000 00:00 0 
+2b9e02686000-2b9e02886000 rwxp 00000000 00:00 0 
+2b9e02886000-2b9e02887000 rwxs 00000000 00:04 47018624                   /dev/zero (deleted)
+2b9e02887000-2b9e02890000 rwxs 00000000 00:04 47018625                   /dev/zero (deleted)
+2b9e02890000-2b9e02891000 ---p 00000000 00:00 0 
+2b9e02891000-2b9e02a91000 rwxp 00000000 00:00 0 
+2b9e02a91000-2b9e02a92000 rwxs 00000000 00:04 47018626                   /dev/zero (deleted)
+2b9e02a92000-2b9e074db000 rwxp 00000000 00:00 0 
+2b9e074db000-2b9e0bf23000 rwxp 00000000 00:00 0 
+2b9e0bf23000-2b9e2d411000 rwxp 00000000 00:00 0 
+2b9e2d411000-2b9e4e8fd000 rwxp 00000000 00:00 0 
+2b9e4e8fd000-2b9e4e8fe000 rwxp 00000000 00:00 0 
+2b9e50000000-2b9e50021000 rwxp 00000000 00:00 0 
+2b9e50021000-2b9e54000000 ---p 00000000 00:00 0 
+7fff7bd8c000-7fff7bdb0000 rwxp 00000000 00:00 0                          [stack]
+7fff7bdff000-7fff7be00000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** glibc detected *** ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector: malloc(): memory corruption: 0x00002abe415a0e10 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x76628)[0x2abe412a4628]
+/lib64/libc.so.6(+0x795df)[0x2abe412a75df]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2abe412a96b7]
+/usr/lib64/libstdc++.so.6(_Znwm+0x1d)[0x2abe40d7508d]
+/usr/lib64/libcoi_host.so.0(+0x21492)[0x2abe42dc0492]
+/usr/lib64/libcoi_host.so.0(+0x1edb5)[0x2abe42dbddb5]
+/usr/lib64/libcoi_host.so.0(+0x1a7a2)[0x2abe42db97a2]
+/usr/lib64/libcoi_host.so.0(COIBufferSetState+0x16b)[0x2abe42db078b]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x17ea2)[0x2abe408acea2]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x11d3a)[0x2abe408a6d3a]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x101c7)[0x2abe408a51c7]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0xf98c)[0x2abe408a498c]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(__offload_offload1+0x52)[0x2abe408b6792]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7759ac]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x88a583]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x822c53]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x80a0e2]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x1189bff]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x114a35c]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x76aea9]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7636d5]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x760a87]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x787ab1]
+/lib64/libc.so.6(__libc_start_main+0xe6)[0x2abe4124cc36]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x40a119]
+======= Memory map: ========
+00400000-01d42000 r-xp 00000000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f42000-01f44000 r-xp 01942000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f44000-0200d000 rwxp 01944000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+0200d000-020c0000 rwxp 00000000 00:00 0                                  [heap]
+020c0000-020c1000 rwxp 00000000 00:00 0                                  [heap]
+020c1000-020c2000 rwxp 00000000 00:00 0                                  [heap]
+020c2000-020c3000 rwxp 00000000 00:00 0                                  [heap]
+020c3000-020c4000 rwxp 00000000 00:00 0                                  [heap]
+020c4000-020c5000 rwxp 00000000 00:00 0                                  [heap]
+020c5000-020c6000 rwxp 00000000 00:00 0                                  [heap]
+020c6000-020c7000 rwxp 00000000 00:00 0                                  [heap]
+020c7000-020c8000 rwxp 00000000 00:00 0                                  [heap]
+020c8000-020c9000 rwxp 00000000 00:00 0                                  [heap]
+020c9000-021c6000 rwxp 00000000 00:00 0                                  [heap]
+021c6000-021c7000 rwxp 00000000 00:00 0                                  [heap]
+021c7000-021c8000 rwxp 00000000 00:00 0                                  [heap]
+021c8000-021c9000 rwxp 00000000 00:00 0                                  [heap]
+021c9000-021ca000 rwxp 00000000 00:00 0                                  [heap]
+021ca000-021cb000 rwxp 00000000 00:00 0                                  [heap]
+021cb000-021cd000 rwxp 00000000 00:00 0                                  [heap]
+021cd000-021ce000 rwxp 00000000 00:00 0                                  [heap]
+021ce000-021cf000 rwxp 00000000 00:00 0                                  [heap]
+021cf000-021d0000 rwxp 00000000 00:00 0                                  [heap]
+021d0000-021d1000 rwxp 00000000 00:00 0                                  [heap]
+021d1000-021d2000 rwxp 00000000 00:00 0                                  [heap]
+021d2000-021d3000 rwxp 00000000 00:00 0                                  [heap]
+021d3000-021d4000 rwxp 00000000 00:00 0                                  [heap]
+021d4000-021d5000 rwxp 00000000 00:00 0                                  [heap]
+021d5000-021d6000 rwxp 00000000 00:00 0                                  [heap]
+021d6000-021d7000 rwxp 00000000 00:00 0                                  [heap]
+021d7000-021d8000 rwxp 00000000 00:00 0                                  [heap]
+021d8000-021d9000 rwxp 00000000 00:00 0                                  [heap]
+021d9000-0225a000 rwxp 00000000 00:00 0                                  [heap]
+0225a000-0225b000 rwxp 00000000 00:00 0                                  [heap]
+0225b000-022dc000 rwxp 00000000 00:00 0                                  [heap]
+022dc000-022dd000 rwxp 00000000 00:00 0                                  [heap]
+022dd000-0235e000 rwxp 00000000 00:00 0                                  [heap]
+0235e000-025f2000 rwxp 00000000 00:00 0                                  [heap]
+025f2000-025f3000 rwxp 00000000 00:00 0                                  [heap]
+025f3000-025f4000 rwxp 00000000 00:00 0                                  [heap]
+025f4000-025f5000 rwxp 00000000 00:00 0                                  [heap]
+025f5000-02fcd000 rwxp 00000000 00:00 0                                  [heap]
+02fcd000-03134000 rwxp 00000000 00:00 0                                  [heap]
+03134000-03f79000 rwxp 00000000 00:00 0                                  [heap]
+03f79000-03ffa000 rwxp 00000000 00:00 0                                  [heap]
+03ffa000-03ffb000 rwxp 00000000 00:00 0                                  [heap]
+03ffb000-0409c000 rwxp 00000000 00:00 0                                  [heap]
+0409c000-0409d000 rwxp 00000000 00:00 0                                  [heap]
+0409d000-0413e000 rwxp 00000000 00:00 0                                  [heap]
+0413e000-0595c000 rwxp 00000000 00:00 0                                  [heap]
+0595c000-05eab000 rwxp 00000000 00:00 0                                  [heap]
+05eab000-05ecc000 rwxp 00000000 00:00 0                                  [heap]
+2aaaaaab0000-2aaaaaab8000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaab8000-2aaaaaac0000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaac0000-2aaaaaae2000 rwxs 01202000 00:10 78481                      /dev/infiniband/uverbs0
+2abe3b214000-2abe3b233000 r-xp 00000000 00:10 43096                      /lib64/ld-2.11.3.so
+2abe3b233000-2abe3b235000 rwxp 00000000 00:00 0 
+2abe3b432000-2abe3b433000 r-xp 0001e000 00:10 43096                      /lib64/ld-2.11.3.so
+2abe3b433000-2abe3b434000 rwxp 0001f000 00:10 43096                      /lib64/ld-2.11.3.so
+2abe3b434000-2abe3b435000 rwxp 00000000 00:00 0 
+2abe3b435000-2abe3bb1a000 r-xp 00000000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2abe3bb1a000-2abe3bd1a000 ---p 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2abe3bd1a000-2abe3bd1b000 r-xp 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2abe3bd1b000-2abe3bd2b000 rwxp 006e6000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2abe3bd2b000-2abe3bd30000 rwxp 00000000 00:00 0 
+2abe3bd30000-2abe3cfec000 r-xp 00000000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2abe3cfec000-2abe3d1ec000 ---p 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2abe3d1ec000-2abe3d1ed000 r-xp 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2abe3d1ed000-2abe3d37f000 rwxp 012bd000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2abe3d37f000-2abe3d385000 rwxp 00000000 00:00 0 
+2abe3d385000-2abe3ea92000 r-xp 00000000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2abe3ea92000-2abe3ec91000 ---p 0170d000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2abe3ec91000-2abe3ec99000 r-xp 0170c000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2abe3ec99000-2abe3ecba000 rwxp 01714000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2abe3ecba000-2abe3ed0c000 rwxp 00000000 00:00 0 
+2abe3ed16000-2abe3ed17000 rwxp 00000000 00:00 0 
+2abe3ed17000-2abe3ed39000 r-xp 00000000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2abe3ed39000-2abe3ef39000 ---p 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2abe3ef39000-2abe3ef3a000 r-xp 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2abe3ef3a000-2abe3ef3b000 rwxp 00023000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2abe3ef3b000-2abe3f045000 r-xp 00000000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2abe3f045000-2abe3f244000 ---p 0010a000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2abe3f244000-2abe3f246000 r-xp 00109000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2abe3f246000-2abe3f24f000 rwxp 0010b000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2abe3f24f000-2abe3f27c000 rwxp 00000000 00:00 0 
+2abe3f27c000-2abe3f293000 r-xp 00000000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2abe3f293000-2abe3f493000 ---p 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2abe3f493000-2abe3f494000 r-xp 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2abe3f494000-2abe3f495000 rwxp 00018000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2abe3f495000-2abe3f49a000 rwxp 00000000 00:00 0 
+2abe3f49a000-2abe3f4f5000 r-xp 00000000 00:10 43100                      /lib64/libm-2.11.3.so
+2abe3f4f5000-2abe3f6f4000 ---p 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2abe3f6f4000-2abe3f6f5000 r-xp 0005a000 00:10 43100                      /lib64/libm-2.11.3.so
+2abe3f6f5000-2abe3f713000 rwxp 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2abe3f713000-2abe3f731000 r-xp 00000000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2abe3f731000-2abe3f930000 ---p 0001e000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2abe3f930000-2abe3f933000 rwxp 0001d000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2abe3f933000-2abe3fa99000 r-xp 00000000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2abe3fa99000-2abe3fc99000 ---p 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2abe3fc99000-2abe3fca0000 rwxp 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2abe3fca0000-2abe3fcc5000 rwxp 00000000 00:00 0 
+2abe3fcc5000-2abe40202000 r-xp 00000000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2abe40202000-2abe40402000 ---p 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2abe40402000-2abe40434000 rwxp 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2abe40434000-2abe40487000 rwxp 00000000 00:00 0 
+2abe40487000-2abe40489000 r-xp 00000000 00:10 43320                      /lib64/libdl-2.11.3.so
+2abe40489000-2abe40689000 ---p 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2abe40689000-2abe4068a000 r-xp 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2abe4068a000-2abe4068b000 rwxp 00003000 00:10 43320                      /lib64/libdl-2.11.3.so
+2abe4068b000-2abe40693000 r-xp 00000000 00:10 43277                      /lib64/librt-2.11.3.so
+2abe40693000-2abe40892000 ---p 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2abe40892000-2abe40893000 r-xp 00007000 00:10 43277                      /lib64/librt-2.11.3.so
+2abe40893000-2abe40894000 rwxp 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2abe40894000-2abe40895000 rwxp 00000000 00:00 0 
+2abe40895000-2abe408ce000 r-xp 00000000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2abe408ce000-2abe40acd000 ---p 00039000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2abe40acd000-2abe40acf000 rwxp 00038000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2abe40acf000-2abe40ad0000 rwxp 00000000 00:00 0 
+2abe40ad0000-2abe40b0c000 r-xp 00000000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2abe40b0c000-2abe40d0b000 ---p 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2abe40d0b000-2abe40d0c000 r-xp 0003b000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2abe40d0c000-2abe40d0e000 rwxp 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2abe40d0e000-2abe40d11000 rwxp 00000000 00:00 0 
+2abe40d11000-2abe40df9000 r-xp 00000000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2abe40df9000-2abe40ff8000 ---p 000e8000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2abe40ff8000-2abe41000000 r-xp 000e7000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2abe41000000-2abe41002000 rwxp 000ef000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2abe41002000-2abe41018000 rwxp 00000000 00:00 0 
+2abe41018000-2abe4102d000 r-xp 00000000 00:10 43081                      /lib64/libgcc_s.so.1
+2abe4102d000-2abe4122c000 ---p 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2abe4122c000-2abe4122d000 r-xp 00014000 00:10 43081                      /lib64/libgcc_s.so.1
+2abe4122d000-2abe4122e000 rwxp 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2abe4122e000-2abe4139c000 r-xp 00000000 00:10 43296                      /lib64/libc-2.11.3.so
+2abe4139c000-2abe4159b000 ---p 0016e000 00:10 43296                      /lib64/libc-2.11.3.so
+2abe4159b000-2abe4159f000 r-xp 0016d000 00:10 43296                      /lib64/libc-2.11.3.so
+2abe4159f000-2abe415a0000 rwxp 00171000 00:10 43296                      /lib64/libc-2.11.3.so
+2abe415a0000-2abe415a6000 rwxp 00000000 00:00 0 
+2abe415a6000-2abe41820000 r-xp 00000000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2abe41820000-2abe41a1f000 ---p 0027a000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2abe41a1f000-2abe41a61000 rwxp 00279000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2abe41a61000-2abe426fd000 r-xp 00000000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2abe426fd000-2abe428fc000 ---p 00c9c000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2abe428fc000-2abe42934000 rwxp 00c9b000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2abe42934000-2abe42939000 r-xp 00000000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2abe42939000-2abe42b39000 ---p 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2abe42b39000-2abe42b3b000 rwxp 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2abe42b3b000-2abe42b3c000 rwxp 00000000 00:00 0 
+2abe42b3c000-2abe42b98000 r-xp 00000000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2abe42b98000-2abe42d97000 ---p 0005c000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2abe42d97000-2abe42d99000 rwxp 0005b000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2abe42d99000-2abe42d9f000 rwxp 00000000 00:00 0 
+2abe42d9f000-2abe42e11000 r-xp 00000000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2abe42e11000-2abe43011000 ---p 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2abe43011000-2abe43015000 rwxp 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2abe43015000-2abe43024000 rwxp 00000000 00:00 0 
+2abe43024000-2abe43026000 r-xp 00000000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2abe43026000-2abe43225000 ---p 00002000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2abe43225000-2abe43226000 rwxp 00001000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2abe43226000-2abe43227000 ---p 00000000 00:00 0 
+2abe43227000-2abe43427000 rwxp 00000000 00:00 0 
+2abe43431000-2abe4343d000 r-xp 00000000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2abe4343d000-2abe4363c000 ---p 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2abe4363c000-2abe4363d000 r-xp 0000b000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2abe4363d000-2abe4363e000 rwxp 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2abe4363e000-2abe43652000 r-xp 00000000 00:10 43087                      /lib64/libnss_ldap.so.2
+2abe43652000-2abe43851000 ---p 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2abe43851000-2abe43852000 r-xp 00013000 00:10 43087                      /lib64/libnss_ldap.so.2
+2abe43852000-2abe43853000 rwxp 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2abe43853000-2abe4385f000 rwxp 00000000 00:00 0 
+2abe4385f000-2abe438a5000 r-xp 00000000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2abe438a5000-2abe43aa5000 ---p 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2abe43aa5000-2abe43aa6000 r-xp 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2abe43aa6000-2abe43aa8000 rwxp 00047000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2abe43aa8000-2abe43ab6000 r-xp 00000000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2abe43ab6000-2abe43cb5000 ---p 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2abe43cb5000-2abe43cb6000 r-xp 0000d000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2abe43cb6000-2abe43cb7000 rwxp 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2abe43cb7000-2abe43cd0000 r-xp 00000000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2abe43cd0000-2abe43ed0000 ---p 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2abe43ed0000-2abe43ed1000 r-xp 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2abe43ed1000-2abe43ed2000 rwxp 0001a000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2abe43ed2000-2abe43f70000 r-xp 00000000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2abe43f70000-2abe4416f000 ---p 0009e000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2abe4416f000-2abe44172000 r-xp 0009d000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2abe44172000-2abe44174000 rwxp 000a0000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2abe44174000-2abe44177000 r-xp 00000000 00:10 43344                      /lib64/libcom_err.so.2.1
+2abe44177000-2abe44376000 ---p 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2abe44376000-2abe44377000 r-xp 00002000 00:10 43344                      /lib64/libcom_err.so.2.1
+2abe44377000-2abe44378000 rwxp 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2abe44378000-2abe443a3000 r-xp 00000000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2abe443a3000-2abe445a3000 ---p 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2abe445a3000-2abe445a4000 r-xp 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2abe445a4000-2abe445a5000 rwxp 0002c000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2abe445a5000-2abe445ba000 r-xp 00000000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2abe445ba000-2abe447b9000 ---p 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2abe447b9000-2abe447ba000 r-xp 00014000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2abe447ba000-2abe447bb000 rwxp 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2abe447bb000-2abe447bd000 rwxp 00000000 00:00 0 
+2abe447bd000-2abe447d0000 r-xp 00000000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2abe447d0000-2abe449d0000 ---p 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2abe449d0000-2abe449d1000 r-xp 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2abe449d1000-2abe449d2000 rwxp 00014000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2abe449d2000-2abe449d4000 rwxp 00000000 00:00 0 
+2abe449d4000-2abe44a23000 r-xp 00000000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2abe44a23000-2abe44c22000 ---p 0004f000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2abe44c22000-2abe44c24000 r-xp 0004e000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2abe44c24000-2abe44c2a000 rwxp 00050000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2abe44c2a000-2abe44d9d000 r-xp 00000000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2abe44d9d000-2abe44f9c000 ---p 00173000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2abe44f9c000-2abe44fac000 r-xp 00172000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2abe44fac000-2abe44fc5000 rwxp 00182000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2abe44fc5000-2abe44fc9000 rwxp 00000000 00:00 0 
+2abe44fc9000-2abe44fed000 r-xp 00000000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2abe44fed000-2abe451ec000 ---p 00024000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2abe451ec000-2abe451ee000 r-xp 00023000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2abe451ee000-2abe451ef000 rwxp 00025000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2abe451ef000-2abe451f6000 r-xp 00000000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2abe451f6000-2abe453f6000 ---p 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2abe453f6000-2abe453f7000 r-xp 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2abe453f7000-2abe453f8000 rwxp 00008000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2abe453f8000-2abe453fa000 r-xp 00000000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2abe453fa000-2abe455f9000 ---p 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2abe455f9000-2abe455fa000 r-xp 00001000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2abe455fa000-2abe455fb000 rwxp 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2abe455fb000-2abe45610000 r-xp 00000000 00:10 43101                      /lib64/libz.so.1.2.7
+2abe45610000-2abe4580f000 ---p 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2abe4580f000-2abe45810000 r-xp 00014000 00:10 43101                      /lib64/libz.so.1.2.7
+2abe45810000-2abe45811000 rwxp 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2abe45811000-2abe4d012000 rwxs 00000000 00:12 47104767                   /dev/shm/Intel_MPI_uzLnLQ (deleted)
+2abe4d012000-2abe4d013000 -w-s 101ffa50000 00:10 78481                   /dev/infiniband/uverbs0
+2abe4d013000-2abe4d014000 -w-s 101ffe50000 00:10 78481                   /dev/infiniband/uverbs0
+2abe4d014000-2abe4d016000 rwxp 00000000 00:00 0 
+2abe4d01c000-2abe4d026000 r-xp 00000000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2abe4d026000-2abe4d226000 ---p 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2abe4d226000-2abe4d227000 r-xp 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2abe4d227000-2abe4d228000 rwxp 0000b000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2abe4d228000-2abe4d24c000 r-xp 00000000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2abe4d24c000-2abe4d44b000 ---p 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2abe4d44b000-2abe4d44c000 r-xp 00023000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2abe4d44c000-2abe4d44d000 rwxp 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2abe4d44d000-2abe4d460000 r-xp 00000000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2abe4d460000-2abe4d660000 ---p 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2abe4d660000-2abe4d661000 r-xp 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2abe4d661000-2abe4d662000 rwxp 00014000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2abe4d662000-2abe4d6ae000 r-xp 00000000 00:10 43186                      /lib64/libnl.so.1.1
+2abe4d6ae000-2abe4d8ae000 ---p 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2abe4d8ae000-2abe4d8af000 r-xp 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2abe4d8af000-2abe4d8b4000 rwxp 0004d000 00:10 43186                      /lib64/libnl.so.1.1
+2abe4d8b4000-2abe4d8b7000 r-xp 00000000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2abe4d8b7000-2abe4dab6000 ---p 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2abe4dab6000-2abe4dab7000 r-xp 00002000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2abe4dab7000-2abe4dab8000 rwxp 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2abe4dab8000-2abe4dac6000 r-xp 00000000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2abe4dac6000-2abe4dcc6000 ---p 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2abe4dcc6000-2abe4dcc7000 r-xp 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2abe4dcc7000-2abe4dcc8000 rwxp 0000f000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2abe4dcc8000-2abe4dd90000 rwxp 00000000 00:00 0 
+2abe4dda0000-2abe4ddc0000 rwxs 01102000 00:10 78481                      /dev/infiniband/uverbs0
+2abe4ddc0000-2abe4e01c000 rwxp 00000000 00:00 0 
+2abe4e01c000-2abe4e01d000 ---p 00000000 00:00 0 
+2abe4e01d000-2abe4e21d000 rwxp 00000000 00:00 0 
+2abe4e94a000-2abe4e94b000 ---p 00000000 00:00 0 
+2abe4e94b000-2abe4eb4b000 rwxp 00000000 00:00 0 
+2abe4eb4b000-2abe4eb4c000 rwxs 00000000 00:04 47059155                   /dev/zero (deleted)
+2abe4eb4c000-2abe4eb55000 rwxs 00000000 00:04 47059156                   /dev/zero (deleted)
+2abe4eb55000-2abe4eb56000 ---p 00000000 00:00 0 
+2abe4eb56000-2abe4ed56000 rwxp 00000000 00:00 0 
+2abe4ed56000-2abe4ed57000 rwxs 00000000 00:04 47059157                   /dev/zero (deleted)
+2abe4ed57000-2abe4ed58000 ---p 00000000 00:00 0 
+2abe4ed58000-2abe4ef58000 rwxp 00000000 00:00 0 
+2abe4f685000-2abe4f686000 ---p 00000000 00:00 0 
+2abe4f686000-2abe4f886000 rwxp 00000000 00:00 0 
+2abe4f886000-2abe4f887000 rwxs 00000000 00:04 47059158                   /dev/zero (deleted)
+2abe4f887000-2abe4f890000 rwxs 00000000 00:04 47059159                   /dev/zero (deleted)
+2abe4f890000-2abe4f891000 ---p 00000000 00:00 0 
+2abe4f891000-2abe4fa91000 rwxp 00000000 00:00 0 
+2abe4fa91000-2abe4fa92000 rwxs 00000000 00:04 47059160                   /dev/zero (deleted)
+2abe4fa92000-2abe544db000 rwxp 00000000 00:00 0 
+2abe544db000-2abe58f23000 rwxp 00000000 00:00 0 
+2abe58f23000-2abe7a411000 rwxp 00000000 00:00 0 
+2abe7a411000-2abe9b8fd000 rwxp 00000000 00:00 0 
+2abe9b8fd000-2abe9b8fe000 rwxp 00000000 00:00 0 
+2abe9c000000-2abe9c021000 rwxp 00000000 00:00 0 
+2abe9c021000-2abea0000000 ---p 00000000 00:00 0 
+7fffc7f89000-7fffc7fad000 rwxp 00000000 00:00 0                          [stack]
+7fffc7fff000-7fffc8000000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** glibc detected *** ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector: malloc(): memory corruption: 0x00002b5b54213e10 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x76628)[0x2b5b53f17628]
+/lib64/libc.so.6(+0x795df)[0x2b5b53f1a5df]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2b5b53f1c6b7]
+/usr/lib64/libstdc++.so.6(_Znwm+0x1d)[0x2b5b539e808d]
+/usr/lib64/libcoi_host.so.0(+0x214d1)[0x2b5b55a334d1]
+/usr/lib64/libcoi_host.so.0(+0x1edb5)[0x2b5b55a30db5]
+/usr/lib64/libcoi_host.so.0(+0x1a7a2)[0x2b5b55a2c7a2]
+/usr/lib64/libcoi_host.so.0(COIBufferSetState+0x16b)[0x2b5b55a2378b]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x17ea2)[0x2b5b5351fea2]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x11d3a)[0x2b5b53519d3a]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x101c7)[0x2b5b535181c7]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0xf98c)[0x2b5b5351798c]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(__offload_offload1+0x52)[0x2b5b53529792]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7759ac]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x88a583]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x822c53]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x80a0e2]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x1189bff]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x114a35c]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x76aea9]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7636d5]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x760a87]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x787ab1]
+/lib64/libc.so.6(__libc_start_main+0xe6)[0x2b5b53ebfc36]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x40a119]
+======= Memory map: ========
+00400000-01d42000 r-xp 00000000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f42000-01f44000 r-xp 01942000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f44000-0200d000 rwxp 01944000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+0200d000-020c0000 rwxp 00000000 00:00 0                                  [heap]
+020c0000-020c1000 rwxp 00000000 00:00 0                                  [heap]
+020c1000-020c2000 rwxp 00000000 00:00 0                                  [heap]
+020c2000-020c3000 rwxp 00000000 00:00 0                                  [heap]
+020c3000-020c4000 rwxp 00000000 00:00 0                                  [heap]
+020c4000-020c5000 rwxp 00000000 00:00 0                                  [heap]
+020c5000-020c6000 rwxp 00000000 00:00 0                                  [heap]
+020c6000-020c7000 rwxp 00000000 00:00 0                                  [heap]
+020c7000-020c8000 rwxp 00000000 00:00 0                                  [heap]
+020c8000-020c9000 rwxp 00000000 00:00 0                                  [heap]
+020c9000-021c6000 rwxp 00000000 00:00 0                                  [heap]
+021c6000-021c7000 rwxp 00000000 00:00 0                                  [heap]
+021c7000-021c8000 rwxp 00000000 00:00 0                                  [heap]
+021c8000-021c9000 rwxp 00000000 00:00 0                                  [heap]
+021c9000-021ca000 rwxp 00000000 00:00 0                                  [heap]
+021ca000-021cb000 rwxp 00000000 00:00 0                                  [heap]
+021cb000-021cd000 rwxp 00000000 00:00 0                                  [heap]
+021cd000-021ce000 rwxp 00000000 00:00 0                                  [heap]
+021ce000-021cf000 rwxp 00000000 00:00 0                                  [heap]
+021cf000-021d0000 rwxp 00000000 00:00 0                                  [heap]
+021d0000-021d1000 rwxp 00000000 00:00 0                                  [heap]
+021d1000-021d2000 rwxp 00000000 00:00 0                                  [heap]
+021d2000-021d3000 rwxp 00000000 00:00 0                                  [heap]
+021d3000-021d4000 rwxp 00000000 00:00 0                                  [heap]
+021d4000-021d5000 rwxp 00000000 00:00 0                                  [heap]
+021d5000-021d6000 rwxp 00000000 00:00 0                                  [heap]
+021d6000-021d7000 rwxp 00000000 00:00 0                                  [heap]
+021d7000-021d8000 rwxp 00000000 00:00 0                                  [heap]
+021d8000-021d9000 rwxp 00000000 00:00 0                                  [heap]
+021d9000-0225a000 rwxp 00000000 00:00 0                                  [heap]
+0225a000-0225b000 rwxp 00000000 00:00 0                                  [heap]
+0225b000-022dc000 rwxp 00000000 00:00 0                                  [heap]
+022dc000-022dd000 rwxp 00000000 00:00 0                                  [heap]
+022dd000-0235e000 rwxp 00000000 00:00 0                                  [heap]
+0235e000-025f2000 rwxp 00000000 00:00 0                                  [heap]
+025f2000-025f3000 rwxp 00000000 00:00 0                                  [heap]
+025f3000-025f4000 rwxp 00000000 00:00 0                                  [heap]
+025f4000-025f5000 rwxp 00000000 00:00 0                                  [heap]
+025f5000-02fcd000 rwxp 00000000 00:00 0                                  [heap]
+02fcd000-03134000 rwxp 00000000 00:00 0                                  [heap]
+03134000-03f79000 rwxp 00000000 00:00 0                                  [heap]
+03f79000-03ffa000 rwxp 00000000 00:00 0                                  [heap]
+03ffa000-03ffb000 rwxp 00000000 00:00 0                                  [heap]
+03ffb000-0409c000 rwxp 00000000 00:00 0                                  [heap]
+0409c000-0409d000 rwxp 00000000 00:00 0                                  [heap]
+0409d000-0413e000 rwxp 00000000 00:00 0                                  [heap]
+0413e000-0595c000 rwxp 00000000 00:00 0                                  [heap]
+0595c000-05eab000 rwxp 00000000 00:00 0                                  [heap]
+05eab000-05ecc000 rwxp 00000000 00:00 0                                  [heap]
+2aaaaaab0000-2aaaaaab8000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaab8000-2aaaaaac0000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaac0000-2aaaaaae2000 rwxs 01202000 00:10 78481                      /dev/infiniband/uverbs0
+2b5b4de87000-2b5b4dea6000 r-xp 00000000 00:10 43096                      /lib64/ld-2.11.3.so
+2b5b4dea6000-2b5b4dea8000 rwxp 00000000 00:00 0 
+2b5b4e0a5000-2b5b4e0a6000 r-xp 0001e000 00:10 43096                      /lib64/ld-2.11.3.so
+2b5b4e0a6000-2b5b4e0a7000 rwxp 0001f000 00:10 43096                      /lib64/ld-2.11.3.so
+2b5b4e0a7000-2b5b4e0a8000 rwxp 00000000 00:00 0 
+2b5b4e0a8000-2b5b4e78d000 r-xp 00000000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b5b4e78d000-2b5b4e98d000 ---p 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b5b4e98d000-2b5b4e98e000 r-xp 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b5b4e98e000-2b5b4e99e000 rwxp 006e6000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b5b4e99e000-2b5b4e9a3000 rwxp 00000000 00:00 0 
+2b5b4e9a3000-2b5b4fc5f000 r-xp 00000000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b5b4fc5f000-2b5b4fe5f000 ---p 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b5b4fe5f000-2b5b4fe60000 r-xp 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b5b4fe60000-2b5b4fff2000 rwxp 012bd000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b5b4fff2000-2b5b4fff8000 rwxp 00000000 00:00 0 
+2b5b4fff8000-2b5b51705000 r-xp 00000000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b5b51705000-2b5b51904000 ---p 0170d000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b5b51904000-2b5b5190c000 r-xp 0170c000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b5b5190c000-2b5b5192d000 rwxp 01714000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b5b5192d000-2b5b5197f000 rwxp 00000000 00:00 0 
+2b5b51989000-2b5b5198a000 rwxp 00000000 00:00 0 
+2b5b5198a000-2b5b519ac000 r-xp 00000000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b5b519ac000-2b5b51bac000 ---p 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b5b51bac000-2b5b51bad000 r-xp 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b5b51bad000-2b5b51bae000 rwxp 00023000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b5b51bae000-2b5b51cb8000 r-xp 00000000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b5b51cb8000-2b5b51eb7000 ---p 0010a000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b5b51eb7000-2b5b51eb9000 r-xp 00109000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b5b51eb9000-2b5b51ec2000 rwxp 0010b000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b5b51ec2000-2b5b51eef000 rwxp 00000000 00:00 0 
+2b5b51eef000-2b5b51f06000 r-xp 00000000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b5b51f06000-2b5b52106000 ---p 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b5b52106000-2b5b52107000 r-xp 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b5b52107000-2b5b52108000 rwxp 00018000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b5b52108000-2b5b5210d000 rwxp 00000000 00:00 0 
+2b5b5210d000-2b5b52168000 r-xp 00000000 00:10 43100                      /lib64/libm-2.11.3.so
+2b5b52168000-2b5b52367000 ---p 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b5b52367000-2b5b52368000 r-xp 0005a000 00:10 43100                      /lib64/libm-2.11.3.so
+2b5b52368000-2b5b52386000 rwxp 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b5b52386000-2b5b523a4000 r-xp 00000000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b5b523a4000-2b5b525a3000 ---p 0001e000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b5b525a3000-2b5b525a6000 rwxp 0001d000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b5b525a6000-2b5b5270c000 r-xp 00000000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b5b5270c000-2b5b5290c000 ---p 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b5b5290c000-2b5b52913000 rwxp 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b5b52913000-2b5b52938000 rwxp 00000000 00:00 0 
+2b5b52938000-2b5b52e75000 r-xp 00000000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b5b52e75000-2b5b53075000 ---p 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b5b53075000-2b5b530a7000 rwxp 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b5b530a7000-2b5b530fa000 rwxp 00000000 00:00 0 
+2b5b530fa000-2b5b530fc000 r-xp 00000000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b5b530fc000-2b5b532fc000 ---p 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b5b532fc000-2b5b532fd000 r-xp 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b5b532fd000-2b5b532fe000 rwxp 00003000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b5b532fe000-2b5b53306000 r-xp 00000000 00:10 43277                      /lib64/librt-2.11.3.so
+2b5b53306000-2b5b53505000 ---p 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b5b53505000-2b5b53506000 r-xp 00007000 00:10 43277                      /lib64/librt-2.11.3.so
+2b5b53506000-2b5b53507000 rwxp 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b5b53507000-2b5b53508000 rwxp 00000000 00:00 0 
+2b5b53508000-2b5b53541000 r-xp 00000000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b5b53541000-2b5b53740000 ---p 00039000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b5b53740000-2b5b53742000 rwxp 00038000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b5b53742000-2b5b53743000 rwxp 00000000 00:00 0 
+2b5b53743000-2b5b5377f000 r-xp 00000000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b5b5377f000-2b5b5397e000 ---p 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b5b5397e000-2b5b5397f000 r-xp 0003b000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b5b5397f000-2b5b53981000 rwxp 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b5b53981000-2b5b53984000 rwxp 00000000 00:00 0 
+2b5b53984000-2b5b53a6c000 r-xp 00000000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b5b53a6c000-2b5b53c6b000 ---p 000e8000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b5b53c6b000-2b5b53c73000 r-xp 000e7000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b5b53c73000-2b5b53c75000 rwxp 000ef000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b5b53c75000-2b5b53c8b000 rwxp 00000000 00:00 0 
+2b5b53c8b000-2b5b53ca0000 r-xp 00000000 00:10 43081                      /lib64/libgcc_s.so.1
+2b5b53ca0000-2b5b53e9f000 ---p 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b5b53e9f000-2b5b53ea0000 r-xp 00014000 00:10 43081                      /lib64/libgcc_s.so.1
+2b5b53ea0000-2b5b53ea1000 rwxp 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b5b53ea1000-2b5b5400f000 r-xp 00000000 00:10 43296                      /lib64/libc-2.11.3.so
+2b5b5400f000-2b5b5420e000 ---p 0016e000 00:10 43296                      /lib64/libc-2.11.3.so
+2b5b5420e000-2b5b54212000 r-xp 0016d000 00:10 43296                      /lib64/libc-2.11.3.so
+2b5b54212000-2b5b54213000 rwxp 00171000 00:10 43296                      /lib64/libc-2.11.3.so
+2b5b54213000-2b5b54219000 rwxp 00000000 00:00 0 
+2b5b54219000-2b5b54493000 r-xp 00000000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b5b54493000-2b5b54692000 ---p 0027a000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b5b54692000-2b5b546d4000 rwxp 00279000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b5b546d4000-2b5b55370000 r-xp 00000000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b5b55370000-2b5b5556f000 ---p 00c9c000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b5b5556f000-2b5b555a7000 rwxp 00c9b000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b5b555a7000-2b5b555ac000 r-xp 00000000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b5b555ac000-2b5b557ac000 ---p 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b5b557ac000-2b5b557ae000 rwxp 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b5b557ae000-2b5b557af000 rwxp 00000000 00:00 0 
+2b5b557af000-2b5b5580b000 r-xp 00000000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b5b5580b000-2b5b55a0a000 ---p 0005c000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b5b55a0a000-2b5b55a0c000 rwxp 0005b000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b5b55a0c000-2b5b55a12000 rwxp 00000000 00:00 0 
+2b5b55a12000-2b5b55a84000 r-xp 00000000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b5b55a84000-2b5b55c84000 ---p 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b5b55c84000-2b5b55c88000 rwxp 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b5b55c88000-2b5b55c97000 rwxp 00000000 00:00 0 
+2b5b55c97000-2b5b55c99000 r-xp 00000000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b5b55c99000-2b5b55e98000 ---p 00002000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b5b55e98000-2b5b55e99000 rwxp 00001000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b5b55e99000-2b5b55e9a000 ---p 00000000 00:00 0 
+2b5b55e9a000-2b5b5609a000 rwxp 00000000 00:00 0 
+2b5b560a4000-2b5b560b0000 r-xp 00000000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b5b560b0000-2b5b562af000 ---p 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b5b562af000-2b5b562b0000 r-xp 0000b000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b5b562b0000-2b5b562b1000 rwxp 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b5b562b1000-2b5b562c5000 r-xp 00000000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b5b562c5000-2b5b564c4000 ---p 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b5b564c4000-2b5b564c5000 r-xp 00013000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b5b564c5000-2b5b564c6000 rwxp 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b5b564c6000-2b5b564d2000 rwxp 00000000 00:00 0 
+2b5b564d2000-2b5b56518000 r-xp 00000000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b5b56518000-2b5b56718000 ---p 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b5b56718000-2b5b56719000 r-xp 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b5b56719000-2b5b5671b000 rwxp 00047000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b5b5671b000-2b5b56729000 r-xp 00000000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b5b56729000-2b5b56928000 ---p 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b5b56928000-2b5b56929000 r-xp 0000d000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b5b56929000-2b5b5692a000 rwxp 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b5b5692a000-2b5b56943000 r-xp 00000000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b5b56943000-2b5b56b43000 ---p 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b5b56b43000-2b5b56b44000 r-xp 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b5b56b44000-2b5b56b45000 rwxp 0001a000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b5b56b45000-2b5b56be3000 r-xp 00000000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b5b56be3000-2b5b56de2000 ---p 0009e000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b5b56de2000-2b5b56de5000 r-xp 0009d000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b5b56de5000-2b5b56de7000 rwxp 000a0000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b5b56de7000-2b5b56dea000 r-xp 00000000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b5b56dea000-2b5b56fe9000 ---p 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b5b56fe9000-2b5b56fea000 r-xp 00002000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b5b56fea000-2b5b56feb000 rwxp 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b5b56feb000-2b5b57016000 r-xp 00000000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b5b57016000-2b5b57216000 ---p 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b5b57216000-2b5b57217000 r-xp 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b5b57217000-2b5b57218000 rwxp 0002c000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b5b57218000-2b5b5722d000 r-xp 00000000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b5b5722d000-2b5b5742c000 ---p 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b5b5742c000-2b5b5742d000 r-xp 00014000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b5b5742d000-2b5b5742e000 rwxp 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b5b5742e000-2b5b57430000 rwxp 00000000 00:00 0 
+2b5b57430000-2b5b57443000 r-xp 00000000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b5b57443000-2b5b57643000 ---p 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b5b57643000-2b5b57644000 r-xp 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b5b57644000-2b5b57645000 rwxp 00014000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b5b57645000-2b5b57647000 rwxp 00000000 00:00 0 
+2b5b57647000-2b5b57696000 r-xp 00000000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b5b57696000-2b5b57895000 ---p 0004f000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b5b57895000-2b5b57897000 r-xp 0004e000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b5b57897000-2b5b5789d000 rwxp 00050000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b5b5789d000-2b5b57a10000 r-xp 00000000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b5b57a10000-2b5b57c0f000 ---p 00173000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b5b57c0f000-2b5b57c1f000 r-xp 00172000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b5b57c1f000-2b5b57c38000 rwxp 00182000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b5b57c38000-2b5b57c3c000 rwxp 00000000 00:00 0 
+2b5b57c3c000-2b5b57c60000 r-xp 00000000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b5b57c60000-2b5b57e5f000 ---p 00024000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b5b57e5f000-2b5b57e61000 r-xp 00023000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b5b57e61000-2b5b57e62000 rwxp 00025000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b5b57e62000-2b5b57e69000 r-xp 00000000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b5b57e69000-2b5b58069000 ---p 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b5b58069000-2b5b5806a000 r-xp 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b5b5806a000-2b5b5806b000 rwxp 00008000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b5b5806b000-2b5b5806d000 r-xp 00000000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b5b5806d000-2b5b5826c000 ---p 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b5b5826c000-2b5b5826d000 r-xp 00001000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b5b5826d000-2b5b5826e000 rwxp 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b5b5826e000-2b5b58283000 r-xp 00000000 00:10 43101                      /lib64/libz.so.1.2.7
+2b5b58283000-2b5b58482000 ---p 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b5b58482000-2b5b58483000 r-xp 00014000 00:10 43101                      /lib64/libz.so.1.2.7
+2b5b58483000-2b5b58484000 rwxp 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b5b58484000-2b5b5fc85000 rwxs 00000000 00:12 47104767                   /dev/shm/Intel_MPI_uzLnLQ (deleted)
+2b5b5fc85000-2b5b5fc86000 -w-s 101ffa55000 00:10 78481                   /dev/infiniband/uverbs0
+2b5b5fc86000-2b5b5fc87000 -w-s 101ffe55000 00:10 78481                   /dev/infiniband/uverbs0
+2b5b5fc87000-2b5b5fc89000 rwxp 00000000 00:00 0 
+2b5b5fc8f000-2b5b5fc99000 r-xp 00000000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b5b5fc99000-2b5b5fe99000 ---p 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b5b5fe99000-2b5b5fe9a000 r-xp 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b5b5fe9a000-2b5b5fe9b000 rwxp 0000b000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b5b5fe9b000-2b5b5febf000 r-xp 00000000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b5b5febf000-2b5b600be000 ---p 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b5b600be000-2b5b600bf000 r-xp 00023000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b5b600bf000-2b5b600c0000 rwxp 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b5b600c0000-2b5b600d3000 r-xp 00000000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b5b600d3000-2b5b602d3000 ---p 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b5b602d3000-2b5b602d4000 r-xp 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b5b602d4000-2b5b602d5000 rwxp 00014000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b5b602d5000-2b5b60321000 r-xp 00000000 00:10 43186                      /lib64/libnl.so.1.1
+2b5b60321000-2b5b60521000 ---p 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b5b60521000-2b5b60522000 r-xp 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b5b60522000-2b5b60527000 rwxp 0004d000 00:10 43186                      /lib64/libnl.so.1.1
+2b5b60527000-2b5b6052a000 r-xp 00000000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b5b6052a000-2b5b60729000 ---p 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b5b60729000-2b5b6072a000 r-xp 00002000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b5b6072a000-2b5b6072b000 rwxp 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b5b6072b000-2b5b60739000 r-xp 00000000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b5b60739000-2b5b60939000 ---p 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b5b60939000-2b5b6093a000 r-xp 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b5b6093a000-2b5b6093b000 rwxp 0000f000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b5b6093b000-2b5b60a03000 rwxp 00000000 00:00 0 
+2b5b60a20000-2b5b60a40000 rwxs 01102000 00:10 78481                      /dev/infiniband/uverbs0
+2b5b60a40000-2b5b60c9c000 rwxp 00000000 00:00 0 
+2b5b60c9c000-2b5b60c9d000 ---p 00000000 00:00 0 
+2b5b60c9d000-2b5b60e9d000 rwxp 00000000 00:00 0 
+2b5b615ca000-2b5b615cb000 ---p 00000000 00:00 0 
+2b5b615cb000-2b5b617cb000 rwxp 00000000 00:00 0 
+2b5b617cb000-2b5b617cc000 rwxs 00000000 00:04 47094030                   /dev/zero (deleted)
+2b5b617cc000-2b5b617d5000 rwxs 00000000 00:04 47094031                   /dev/zero (deleted)
+2b5b617d5000-2b5b617d6000 ---p 00000000 00:00 0 
+2b5b617d6000-2b5b619d6000 rwxp 00000000 00:00 0 
+2b5b619d6000-2b5b619d7000 rwxs 00000000 00:04 47094032                   /dev/zero (deleted)
+2b5b619d7000-2b5b619d8000 ---p 00000000 00:00 0 
+2b5b619d8000-2b5b61bd8000 rwxp 00000000 00:00 0 
+2b5b62305000-2b5b62306000 ---p 00000000 00:00 0 
+2b5b62306000-2b5b62506000 rwxp 00000000 00:00 0 
+2b5b62506000-2b5b62507000 rwxs 00000000 00:04 47094033                   /dev/zero (deleted)
+2b5b62507000-2b5b62510000 rwxs 00000000 00:04 47094034                   /dev/zero (deleted)
+2b5b62510000-2b5b62511000 ---p 00000000 00:00 0 
+2b5b62511000-2b5b62711000 rwxp 00000000 00:00 0 
+2b5b62711000-2b5b62712000 rwxs 00000000 00:04 47094035                   /dev/zero (deleted)
+2b5b62712000-2b5b6715b000 rwxp 00000000 00:00 0 
+2b5b6715b000-2b5b6bba3000 rwxp 00000000 00:00 0 
+2b5b6bba3000-2b5b8d091000 rwxp 00000000 00:00 0 
+2b5b8d091000-2b5bae57d000 rwxp 00000000 00:00 0 
+2b5bae57d000-2b5bae57e000 rwxp 00000000 00:00 0 
+2b5bb0000000-2b5bb0021000 rwxp 00000000 00:00 0 
+2b5bb0021000-2b5bb4000000 ---p 00000000 00:00 0 
+7fff2b135000-7fff2b159000 rwxp 00000000 00:00 0                          [stack]
+7fff2b1f3000-7fff2b1f4000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** glibc detected *** ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector: malloc(): memory corruption: 0x00002b17055ffe10 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x76628)[0x2b1705303628]
+/lib64/libc.so.6(+0x795df)[0x2b17053065df]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2b17053086b7]
+/usr/lib64/libstdc++.so.6(_Znwm+0x1d)[0x2b1704dd408d]
+/usr/lib64/libcoi_host.so.0(+0x214d1)[0x2b1706e1f4d1]
+/usr/lib64/libcoi_host.so.0(+0x1edb5)[0x2b1706e1cdb5]
+/usr/lib64/libcoi_host.so.0(+0x1a7a2)[0x2b1706e187a2]
+/usr/lib64/libcoi_host.so.0(COIBufferSetState+0x16b)[0x2b1706e0f78b]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x17ea2)[0x2b170490bea2]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x11d3a)[0x2b1704905d3a]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x101c7)[0x2b17049041c7]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0xf98c)[0x2b170490398c]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(__offload_offload1+0x52)[0x2b1704915792]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7759ac]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x88a583]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x822c53]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x80a0e2]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x1189bff]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x114a35c]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x76aea9]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7636d5]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x760a87]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x787ab1]
+/lib64/libc.so.6(__libc_start_main+0xe6)[0x2b17052abc36]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x40a119]
+======= Memory map: ========
+00400000-01d42000 r-xp 00000000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f42000-01f44000 r-xp 01942000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f44000-0200d000 rwxp 01944000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+0200d000-020c2000 rwxp 00000000 00:00 0                                  [heap]
+020c2000-020c3000 rwxp 00000000 00:00 0                                  [heap]
+020c3000-020c4000 rwxp 00000000 00:00 0                                  [heap]
+020c4000-020c5000 rwxp 00000000 00:00 0                                  [heap]
+020c5000-020c6000 rwxp 00000000 00:00 0                                  [heap]
+020c6000-020c7000 rwxp 00000000 00:00 0                                  [heap]
+020c7000-020c8000 rwxp 00000000 00:00 0                                  [heap]
+020c8000-020c9000 rwxp 00000000 00:00 0                                  [heap]
+020c9000-021c2000 rwxp 00000000 00:00 0                                  [heap]
+021c2000-021c3000 rwxp 00000000 00:00 0                                  [heap]
+021c3000-021c4000 rwxp 00000000 00:00 0                                  [heap]
+021c4000-021c5000 rwxp 00000000 00:00 0                                  [heap]
+021c5000-021c6000 rwxp 00000000 00:00 0                                  [heap]
+021c6000-021c7000 rwxp 00000000 00:00 0                                  [heap]
+021c7000-021c8000 rwxp 00000000 00:00 0                                  [heap]
+021c8000-021c9000 rwxp 00000000 00:00 0                                  [heap]
+021c9000-021cd000 rwxp 00000000 00:00 0                                  [heap]
+021cd000-021ce000 rwxp 00000000 00:00 0                                  [heap]
+021ce000-021cf000 rwxp 00000000 00:00 0                                  [heap]
+021cf000-02250000 rwxp 00000000 00:00 0                                  [heap]
+02250000-02251000 rwxp 00000000 00:00 0                                  [heap]
+02251000-022d2000 rwxp 00000000 00:00 0                                  [heap]
+022d2000-02338000 rwxp 00000000 00:00 0                                  [heap]
+02338000-02339000 rwxp 00000000 00:00 0                                  [heap]
+02339000-02572000 rwxp 00000000 00:00 0                                  [heap]
+02572000-025f3000 rwxp 00000000 00:00 0                                  [heap]
+025f3000-02741000 rwxp 00000000 00:00 0                                  [heap]
+02741000-02742000 rwxp 00000000 00:00 0                                  [heap]
+02742000-02743000 rwxp 00000000 00:00 0                                  [heap]
+02743000-02744000 rwxp 00000000 00:00 0                                  [heap]
+02744000-02745000 rwxp 00000000 00:00 0                                  [heap]
+02745000-02746000 rwxp 00000000 00:00 0                                  [heap]
+02746000-02747000 rwxp 00000000 00:00 0                                  [heap]
+02747000-02748000 rwxp 00000000 00:00 0                                  [heap]
+02748000-02749000 rwxp 00000000 00:00 0                                  [heap]
+02749000-0274a000 rwxp 00000000 00:00 0                                  [heap]
+0274a000-0274b000 rwxp 00000000 00:00 0                                  [heap]
+0274b000-0274c000 rwxp 00000000 00:00 0                                  [heap]
+0274c000-0310d000 rwxp 00000000 00:00 0                                  [heap]
+0310d000-0318e000 rwxp 00000000 00:00 0                                  [heap]
+0318e000-0318f000 rwxp 00000000 00:00 0                                  [heap]
+0318f000-03230000 rwxp 00000000 00:00 0                                  [heap]
+03230000-03231000 rwxp 00000000 00:00 0                                  [heap]
+03231000-032d2000 rwxp 00000000 00:00 0                                  [heap]
+032d2000-032d3000 rwxp 00000000 00:00 0                                  [heap]
+032d3000-0343a000 rwxp 00000000 00:00 0                                  [heap]
+0343a000-056bc000 rwxp 00000000 00:00 0                                  [heap]
+056bc000-05c0b000 rwxp 00000000 00:00 0                                  [heap]
+05c0b000-05c2c000 rwxp 00000000 00:00 0                                  [heap]
+2aaaaaab0000-2aaaaaab8000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaab8000-2aaaaaac0000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaac0000-2aaaaaae2000 rwxs 01202000 00:10 78481                      /dev/infiniband/uverbs0
+2b16ff273000-2b16ff292000 r-xp 00000000 00:10 43096                      /lib64/ld-2.11.3.so
+2b16ff292000-2b16ff294000 rwxp 00000000 00:00 0 
+2b16ff491000-2b16ff492000 r-xp 0001e000 00:10 43096                      /lib64/ld-2.11.3.so
+2b16ff492000-2b16ff493000 rwxp 0001f000 00:10 43096                      /lib64/ld-2.11.3.so
+2b16ff493000-2b16ff494000 rwxp 00000000 00:00 0 
+2b16ff494000-2b16ffb79000 r-xp 00000000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b16ffb79000-2b16ffd79000 ---p 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b16ffd79000-2b16ffd7a000 r-xp 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b16ffd7a000-2b16ffd8a000 rwxp 006e6000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b16ffd8a000-2b16ffd8f000 rwxp 00000000 00:00 0 
+2b16ffd8f000-2b170104b000 r-xp 00000000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b170104b000-2b170124b000 ---p 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b170124b000-2b170124c000 r-xp 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b170124c000-2b17013de000 rwxp 012bd000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b17013de000-2b17013e4000 rwxp 00000000 00:00 0 
+2b17013e4000-2b1702af1000 r-xp 00000000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b1702af1000-2b1702cf0000 ---p 0170d000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b1702cf0000-2b1702cf8000 r-xp 0170c000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b1702cf8000-2b1702d19000 rwxp 01714000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b1702d19000-2b1702d6b000 rwxp 00000000 00:00 0 
+2b1702d75000-2b1702d76000 rwxp 00000000 00:00 0 
+2b1702d76000-2b1702d98000 r-xp 00000000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b1702d98000-2b1702f98000 ---p 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b1702f98000-2b1702f99000 r-xp 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b1702f99000-2b1702f9a000 rwxp 00023000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b1702f9a000-2b17030a4000 r-xp 00000000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b17030a4000-2b17032a3000 ---p 0010a000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b17032a3000-2b17032a5000 r-xp 00109000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b17032a5000-2b17032ae000 rwxp 0010b000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b17032ae000-2b17032db000 rwxp 00000000 00:00 0 
+2b17032db000-2b17032f2000 r-xp 00000000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b17032f2000-2b17034f2000 ---p 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b17034f2000-2b17034f3000 r-xp 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b17034f3000-2b17034f4000 rwxp 00018000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b17034f4000-2b17034f9000 rwxp 00000000 00:00 0 
+2b17034f9000-2b1703554000 r-xp 00000000 00:10 43100                      /lib64/libm-2.11.3.so
+2b1703554000-2b1703753000 ---p 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b1703753000-2b1703754000 r-xp 0005a000 00:10 43100                      /lib64/libm-2.11.3.so
+2b1703754000-2b1703772000 rwxp 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b1703772000-2b1703790000 r-xp 00000000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b1703790000-2b170398f000 ---p 0001e000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b170398f000-2b1703992000 rwxp 0001d000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b1703992000-2b1703af8000 r-xp 00000000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b1703af8000-2b1703cf8000 ---p 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b1703cf8000-2b1703cff000 rwxp 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b1703cff000-2b1703d24000 rwxp 00000000 00:00 0 
+2b1703d24000-2b1704261000 r-xp 00000000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b1704261000-2b1704461000 ---p 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b1704461000-2b1704493000 rwxp 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b1704493000-2b17044e6000 rwxp 00000000 00:00 0 
+2b17044e6000-2b17044e8000 r-xp 00000000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b17044e8000-2b17046e8000 ---p 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b17046e8000-2b17046e9000 r-xp 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b17046e9000-2b17046ea000 rwxp 00003000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b17046ea000-2b17046f2000 r-xp 00000000 00:10 43277                      /lib64/librt-2.11.3.so
+2b17046f2000-2b17048f1000 ---p 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b17048f1000-2b17048f2000 r-xp 00007000 00:10 43277                      /lib64/librt-2.11.3.so
+2b17048f2000-2b17048f3000 rwxp 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b17048f3000-2b17048f4000 rwxp 00000000 00:00 0 
+2b17048f4000-2b170492d000 r-xp 00000000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b170492d000-2b1704b2c000 ---p 00039000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b1704b2c000-2b1704b2e000 rwxp 00038000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b1704b2e000-2b1704b2f000 rwxp 00000000 00:00 0 
+2b1704b2f000-2b1704b6b000 r-xp 00000000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b1704b6b000-2b1704d6a000 ---p 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b1704d6a000-2b1704d6b000 r-xp 0003b000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b1704d6b000-2b1704d6d000 rwxp 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b1704d6d000-2b1704d70000 rwxp 00000000 00:00 0 
+2b1704d70000-2b1704e58000 r-xp 00000000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b1704e58000-2b1705057000 ---p 000e8000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b1705057000-2b170505f000 r-xp 000e7000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b170505f000-2b1705061000 rwxp 000ef000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b1705061000-2b1705077000 rwxp 00000000 00:00 0 
+2b1705077000-2b170508c000 r-xp 00000000 00:10 43081                      /lib64/libgcc_s.so.1
+2b170508c000-2b170528b000 ---p 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b170528b000-2b170528c000 r-xp 00014000 00:10 43081                      /lib64/libgcc_s.so.1
+2b170528c000-2b170528d000 rwxp 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b170528d000-2b17053fb000 r-xp 00000000 00:10 43296                      /lib64/libc-2.11.3.so
+2b17053fb000-2b17055fa000 ---p 0016e000 00:10 43296                      /lib64/libc-2.11.3.so
+2b17055fa000-2b17055fe000 r-xp 0016d000 00:10 43296                      /lib64/libc-2.11.3.so
+2b17055fe000-2b17055ff000 rwxp 00171000 00:10 43296                      /lib64/libc-2.11.3.so
+2b17055ff000-2b1705605000 rwxp 00000000 00:00 0 
+2b1705605000-2b170587f000 r-xp 00000000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b170587f000-2b1705a7e000 ---p 0027a000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b1705a7e000-2b1705ac0000 rwxp 00279000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b1705ac0000-2b170675c000 r-xp 00000000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b170675c000-2b170695b000 ---p 00c9c000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b170695b000-2b1706993000 rwxp 00c9b000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b1706993000-2b1706998000 r-xp 00000000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b1706998000-2b1706b98000 ---p 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b1706b98000-2b1706b9a000 rwxp 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b1706b9a000-2b1706b9b000 rwxp 00000000 00:00 0 
+2b1706b9b000-2b1706bf7000 r-xp 00000000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b1706bf7000-2b1706df6000 ---p 0005c000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b1706df6000-2b1706df8000 rwxp 0005b000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b1706df8000-2b1706dfe000 rwxp 00000000 00:00 0 
+2b1706dfe000-2b1706e70000 r-xp 00000000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b1706e70000-2b1707070000 ---p 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b1707070000-2b1707074000 rwxp 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b1707074000-2b1707083000 rwxp 00000000 00:00 0 
+2b1707083000-2b1707085000 r-xp 00000000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b1707085000-2b1707284000 ---p 00002000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b1707284000-2b1707285000 rwxp 00001000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b1707285000-2b1707286000 ---p 00000000 00:00 0 
+2b1707286000-2b1707486000 rwxp 00000000 00:00 0 
+2b1707490000-2b170749c000 r-xp 00000000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b170749c000-2b170769b000 ---p 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b170769b000-2b170769c000 r-xp 0000b000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b170769c000-2b170769d000 rwxp 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b170769d000-2b17076b1000 r-xp 00000000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b17076b1000-2b17078b0000 ---p 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b17078b0000-2b17078b1000 r-xp 00013000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b17078b1000-2b17078b2000 rwxp 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b17078b2000-2b17078be000 rwxp 00000000 00:00 0 
+2b17078be000-2b1707904000 r-xp 00000000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b1707904000-2b1707b04000 ---p 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b1707b04000-2b1707b05000 r-xp 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b1707b05000-2b1707b07000 rwxp 00047000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b1707b07000-2b1707b15000 r-xp 00000000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b1707b15000-2b1707d14000 ---p 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b1707d14000-2b1707d15000 r-xp 0000d000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b1707d15000-2b1707d16000 rwxp 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b1707d16000-2b1707d2f000 r-xp 00000000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b1707d2f000-2b1707f2f000 ---p 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b1707f2f000-2b1707f30000 r-xp 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b1707f30000-2b1707f31000 rwxp 0001a000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b1707f31000-2b1707fcf000 r-xp 00000000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b1707fcf000-2b17081ce000 ---p 0009e000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b17081ce000-2b17081d1000 r-xp 0009d000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b17081d1000-2b17081d3000 rwxp 000a0000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b17081d3000-2b17081d6000 r-xp 00000000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b17081d6000-2b17083d5000 ---p 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b17083d5000-2b17083d6000 r-xp 00002000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b17083d6000-2b17083d7000 rwxp 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b17083d7000-2b1708402000 r-xp 00000000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b1708402000-2b1708602000 ---p 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b1708602000-2b1708603000 r-xp 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b1708603000-2b1708604000 rwxp 0002c000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b1708604000-2b1708619000 r-xp 00000000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b1708619000-2b1708818000 ---p 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b1708818000-2b1708819000 r-xp 00014000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b1708819000-2b170881a000 rwxp 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b170881a000-2b170881c000 rwxp 00000000 00:00 0 
+2b170881c000-2b170882f000 r-xp 00000000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b170882f000-2b1708a2f000 ---p 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b1708a2f000-2b1708a30000 r-xp 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b1708a30000-2b1708a31000 rwxp 00014000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b1708a31000-2b1708a33000 rwxp 00000000 00:00 0 
+2b1708a33000-2b1708a82000 r-xp 00000000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b1708a82000-2b1708c81000 ---p 0004f000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b1708c81000-2b1708c83000 r-xp 0004e000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b1708c83000-2b1708c89000 rwxp 00050000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b1708c89000-2b1708dfc000 r-xp 00000000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b1708dfc000-2b1708ffb000 ---p 00173000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b1708ffb000-2b170900b000 r-xp 00172000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b170900b000-2b1709024000 rwxp 00182000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b1709024000-2b1709028000 rwxp 00000000 00:00 0 
+2b1709028000-2b170904c000 r-xp 00000000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b170904c000-2b170924b000 ---p 00024000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b170924b000-2b170924d000 r-xp 00023000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b170924d000-2b170924e000 rwxp 00025000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b170924e000-2b1709255000 r-xp 00000000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b1709255000-2b1709455000 ---p 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b1709455000-2b1709456000 r-xp 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b1709456000-2b1709457000 rwxp 00008000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b1709457000-2b1709459000 r-xp 00000000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b1709459000-2b1709658000 ---p 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b1709658000-2b1709659000 r-xp 00001000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b1709659000-2b170965a000 rwxp 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b170965a000-2b170966f000 r-xp 00000000 00:10 43101                      /lib64/libz.so.1.2.7
+2b170966f000-2b170986e000 ---p 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b170986e000-2b170986f000 r-xp 00014000 00:10 43101                      /lib64/libz.so.1.2.7
+2b170986f000-2b1709870000 rwxp 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b1709870000-2b1711071000 rwxs 00000000 00:12 47104767                   /dev/shm/Intel_MPI_uzLnLQ (deleted)
+2b1711071000-2b1711072000 -w-s 101ffa4d000 00:10 78481                   /dev/infiniband/uverbs0
+2b1711072000-2b1711073000 -w-s 101ffe4d000 00:10 78481                   /dev/infiniband/uverbs0
+2b1711073000-2b1711075000 rwxp 00000000 00:00 0 
+2b171107b000-2b1711085000 r-xp 00000000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b1711085000-2b1711285000 ---p 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b1711285000-2b1711286000 r-xp 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b1711286000-2b1711287000 rwxp 0000b000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b1711287000-2b17112ab000 r-xp 00000000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b17112ab000-2b17114aa000 ---p 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b17114aa000-2b17114ab000 r-xp 00023000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b17114ab000-2b17114ac000 rwxp 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b17114ac000-2b17114bf000 r-xp 00000000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b17114bf000-2b17116bf000 ---p 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b17116bf000-2b17116c0000 r-xp 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b17116c0000-2b17116c1000 rwxp 00014000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b17116c1000-2b171170d000 r-xp 00000000 00:10 43186                      /lib64/libnl.so.1.1
+2b171170d000-2b171190d000 ---p 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b171190d000-2b171190e000 r-xp 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b171190e000-2b1711913000 rwxp 0004d000 00:10 43186                      /lib64/libnl.so.1.1
+2b1711913000-2b1711916000 r-xp 00000000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b1711916000-2b1711b15000 ---p 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b1711b15000-2b1711b16000 r-xp 00002000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b1711b16000-2b1711b17000 rwxp 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b1711b17000-2b1711b25000 r-xp 00000000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b1711b25000-2b1711d25000 ---p 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b1711d25000-2b1711d26000 r-xp 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b1711d26000-2b1711d27000 rwxp 0000f000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b1711d27000-2b1711def000 rwxp 00000000 00:00 0 
+2b1711e00000-2b1711e20000 rwxs 01102000 00:10 78481                      /dev/infiniband/uverbs0
+2b1711e20000-2b171207c000 rwxp 00000000 00:00 0 
+2b171207c000-2b171207d000 ---p 00000000 00:00 0 
+2b171207d000-2b171227d000 rwxp 00000000 00:00 0 
+2b17129aa000-2b17129ab000 ---p 00000000 00:00 0 
+2b17129ab000-2b1712bab000 rwxp 00000000 00:00 0 
+2b1712bab000-2b1712bac000 rwxs 00000000 00:04 47106697                   /dev/zero (deleted)
+2b1712bac000-2b1712bb5000 rwxs 00000000 00:04 47106698                   /dev/zero (deleted)
+2b1712bb5000-2b1712bb6000 ---p 00000000 00:00 0 
+2b1712bb6000-2b1712db6000 rwxp 00000000 00:00 0 
+2b1712db6000-2b1712db7000 rwxs 00000000 00:04 47106699                   /dev/zero (deleted)
+2b1712db7000-2b1712db8000 ---p 00000000 00:00 0 
+2b1712db8000-2b1712fb8000 rwxp 00000000 00:00 0 
+2b17136e5000-2b17136e6000 ---p 00000000 00:00 0 
+2b17136e6000-2b17138e6000 rwxp 00000000 00:00 0 
+2b17138e6000-2b17138e7000 rwxs 00000000 00:04 47106700                   /dev/zero (deleted)
+2b17138e7000-2b17138f0000 rwxs 00000000 00:04 47106701                   /dev/zero (deleted)
+2b17138f0000-2b17138f1000 ---p 00000000 00:00 0 
+2b17138f1000-2b1713af1000 rwxp 00000000 00:00 0 
+2b1713af1000-2b1713af2000 rwxs 00000000 00:04 47106702                   /dev/zero (deleted)
+2b1713af2000-2b171853b000 rwxp 00000000 00:00 0 
+2b171853b000-2b171cf83000 rwxp 00000000 00:00 0 
+2b171cf83000-2b173e471000 rwxp 00000000 00:00 0 
+2b173e471000-2b175f95d000 rwxp 00000000 00:00 0 
+2b175f95d000-2b175f95e000 rwxp 00000000 00:00 0 
+2b1760000000-2b1760021000 rwxp 00000000 00:00 0 
+2b1760021000-2b1764000000 ---p 00000000 00:00 0 
+7ffffe427000-7ffffe44b000 rwxp 00000000 00:00 0                          [stack]
+7ffffe47b000-7ffffe47c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** glibc detected *** ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector: malloc(): memory corruption: 0x00002b9a5d0b3e10 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x76628)[0x2b9a5cdb7628]
+/lib64/libc.so.6(+0x795df)[0x2b9a5cdba5df]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2b9a5cdbc6b7]
+/usr/lib64/libstdc++.so.6(_Znwm+0x1d)[0x2b9a5c88808d]
+/usr/lib64/libcoi_host.so.0(+0x214d1)[0x2b9a5e8d34d1]
+/usr/lib64/libcoi_host.so.0(+0x1edb5)[0x2b9a5e8d0db5]
+/usr/lib64/libcoi_host.so.0(+0x1a7a2)[0x2b9a5e8cc7a2]
+/usr/lib64/libcoi_host.so.0(COIBufferSetState+0x16b)[0x2b9a5e8c378b]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x17ea2)[0x2b9a5c3bfea2]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x11d3a)[0x2b9a5c3b9d3a]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x101c7)[0x2b9a5c3b81c7]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0xf98c)[0x2b9a5c3b798c]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(__offload_offload1+0x52)[0x2b9a5c3c9792]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7759ac]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x88a583]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x822c53]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x80a0e2]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x1189bff]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x114a35c]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x76aea9]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7636d5]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x760a87]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x787ab1]
+/lib64/libc.so.6(__libc_start_main+0xe6)[0x2b9a5cd5fc36]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x40a119]
+======= Memory map: ========
+00400000-01d42000 r-xp 00000000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f42000-01f44000 r-xp 01942000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+01f44000-0200d000 rwxp 01944000 00:1f 298139455                          /home/hpc/pr92ka/di49reb/tersoff-sc16/machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector
+0200d000-020c0000 rwxp 00000000 00:00 0                                  [heap]
+020c0000-020c1000 rwxp 00000000 00:00 0                                  [heap]
+020c1000-020c2000 rwxp 00000000 00:00 0                                  [heap]
+020c2000-020c3000 rwxp 00000000 00:00 0                                  [heap]
+020c3000-020c4000 rwxp 00000000 00:00 0                                  [heap]
+020c4000-020c5000 rwxp 00000000 00:00 0                                  [heap]
+020c5000-020c6000 rwxp 00000000 00:00 0                                  [heap]
+020c6000-020c7000 rwxp 00000000 00:00 0                                  [heap]
+020c7000-020c8000 rwxp 00000000 00:00 0                                  [heap]
+020c8000-020c9000 rwxp 00000000 00:00 0                                  [heap]
+020c9000-021c6000 rwxp 00000000 00:00 0                                  [heap]
+021c6000-021c7000 rwxp 00000000 00:00 0                                  [heap]
+021c7000-021c8000 rwxp 00000000 00:00 0                                  [heap]
+021c8000-021c9000 rwxp 00000000 00:00 0                                  [heap]
+021c9000-021ca000 rwxp 00000000 00:00 0                                  [heap]
+021ca000-021cb000 rwxp 00000000 00:00 0                                  [heap]
+021cb000-021cd000 rwxp 00000000 00:00 0                                  [heap]
+021cd000-021ce000 rwxp 00000000 00:00 0                                  [heap]
+021ce000-021cf000 rwxp 00000000 00:00 0                                  [heap]
+021cf000-021d0000 rwxp 00000000 00:00 0                                  [heap]
+021d0000-021d1000 rwxp 00000000 00:00 0                                  [heap]
+021d1000-021d2000 rwxp 00000000 00:00 0                                  [heap]
+021d2000-021d3000 rwxp 00000000 00:00 0                                  [heap]
+021d3000-021d4000 rwxp 00000000 00:00 0                                  [heap]
+021d4000-021d5000 rwxp 00000000 00:00 0                                  [heap]
+021d5000-021d6000 rwxp 00000000 00:00 0                                  [heap]
+021d6000-021d7000 rwxp 00000000 00:00 0                                  [heap]
+021d7000-021d8000 rwxp 00000000 00:00 0                                  [heap]
+021d8000-021d9000 rwxp 00000000 00:00 0                                  [heap]
+021d9000-0225a000 rwxp 00000000 00:00 0                                  [heap]
+0225a000-0225b000 rwxp 00000000 00:00 0                                  [heap]
+0225b000-022dc000 rwxp 00000000 00:00 0                                  [heap]
+022dc000-022dd000 rwxp 00000000 00:00 0                                  [heap]
+022dd000-0235e000 rwxp 00000000 00:00 0                                  [heap]
+0235e000-025f2000 rwxp 00000000 00:00 0                                  [heap]
+025f2000-025f3000 rwxp 00000000 00:00 0                                  [heap]
+025f3000-025f4000 rwxp 00000000 00:00 0                                  [heap]
+025f4000-025f5000 rwxp 00000000 00:00 0                                  [heap]
+025f5000-02fcd000 rwxp 00000000 00:00 0                                  [heap]
+02fcd000-03134000 rwxp 00000000 00:00 0                                  [heap]
+03134000-03f79000 rwxp 00000000 00:00 0                                  [heap]
+03f79000-03ffa000 rwxp 00000000 00:00 0                                  [heap]
+03ffa000-03ffb000 rwxp 00000000 00:00 0                                  [heap]
+03ffb000-0409c000 rwxp 00000000 00:00 0                                  [heap]
+0409c000-0409d000 rwxp 00000000 00:00 0                                  [heap]
+0409d000-0413e000 rwxp 00000000 00:00 0                                  [heap]
+0413e000-0595c000 rwxp 00000000 00:00 0                                  [heap]
+0595c000-05eab000 rwxp 00000000 00:00 0                                  [heap]
+05eab000-05ecc000 rwxp 00000000 00:00 0                                  [heap]
+2aaaaaab0000-2aaaaaab8000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaab8000-2aaaaaac0000 rwxs 00f02000 00:10 78481                      /dev/infiniband/uverbs0
+2aaaaaac0000-2aaaaaae2000 rwxs 01202000 00:10 78481                      /dev/infiniband/uverbs0
+2b9a56d27000-2b9a56d46000 r-xp 00000000 00:10 43096                      /lib64/ld-2.11.3.so
+2b9a56d46000-2b9a56d48000 rwxp 00000000 00:00 0 
+2b9a56f45000-2b9a56f46000 r-xp 0001e000 00:10 43096                      /lib64/ld-2.11.3.so
+2b9a56f46000-2b9a56f47000 rwxp 0001f000 00:10 43096                      /lib64/ld-2.11.3.so
+2b9a56f47000-2b9a56f48000 rwxp 00000000 00:00 0 
+2b9a56f48000-2b9a5762d000 r-xp 00000000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9a5762d000-2b9a5782d000 ---p 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9a5782d000-2b9a5782e000 r-xp 006e5000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9a5782e000-2b9a5783e000 rwxp 006e6000 00:19 99878849                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_ilp64.so
+2b9a5783e000-2b9a57843000 rwxp 00000000 00:00 0 
+2b9a57843000-2b9a58aff000 r-xp 00000000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9a58aff000-2b9a58cff000 ---p 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9a58cff000-2b9a58d00000 r-xp 012bc000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9a58d00000-2b9a58e92000 rwxp 012bd000 00:19 99878851                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_intel_thread.so
+2b9a58e92000-2b9a58e98000 rwxp 00000000 00:00 0 
+2b9a58e98000-2b9a5a5a5000 r-xp 00000000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9a5a5a5000-2b9a5a7a4000 ---p 0170d000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9a5a7a4000-2b9a5a7ac000 r-xp 0170c000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9a5a7ac000-2b9a5a7cd000 rwxp 01714000 00:19 99878847                   /lrz/mnt/sys.x86_64/intel/studio_u5/compilers_and_libraries_2016.2.181/linux/mkl/lib/intel64_lin/libmkl_core.so
+2b9a5a7cd000-2b9a5a81f000 rwxp 00000000 00:00 0 
+2b9a5a829000-2b9a5a82a000 rwxp 00000000 00:00 0 
+2b9a5a82a000-2b9a5a84c000 r-xp 00000000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9a5a84c000-2b9a5aa4c000 ---p 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9a5aa4c000-2b9a5aa4d000 r-xp 00022000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9a5aa4d000-2b9a5aa4e000 rwxp 00023000 00:10 44034                      /usr/lib64/libjpeg.so.62.0.0
+2b9a5aa4e000-2b9a5ab58000 r-xp 00000000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9a5ab58000-2b9a5ad57000 ---p 0010a000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9a5ad57000-2b9a5ad59000 r-xp 00109000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9a5ad59000-2b9a5ad62000 rwxp 0010b000 00:19 84953501                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libiomp5.so
+2b9a5ad62000-2b9a5ad8f000 rwxp 00000000 00:00 0 
+2b9a5ad8f000-2b9a5ada6000 r-xp 00000000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9a5ada6000-2b9a5afa6000 ---p 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9a5afa6000-2b9a5afa7000 r-xp 00017000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9a5afa7000-2b9a5afa8000 rwxp 00018000 00:10 43099                      /lib64/libpthread-2.11.3.so
+2b9a5afa8000-2b9a5afad000 rwxp 00000000 00:00 0 
+2b9a5afad000-2b9a5b008000 r-xp 00000000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9a5b008000-2b9a5b207000 ---p 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9a5b207000-2b9a5b208000 r-xp 0005a000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9a5b208000-2b9a5b226000 rwxp 0005b000 00:10 43100                      /lib64/libm-2.11.3.so
+2b9a5b226000-2b9a5b244000 r-xp 00000000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b9a5b244000-2b9a5b443000 ---p 0001e000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b9a5b443000-2b9a5b446000 rwxp 0001d000 00:19 79474820                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpicxx.so.12.0
+2b9a5b446000-2b9a5b5ac000 r-xp 00000000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b9a5b5ac000-2b9a5b7ac000 ---p 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b9a5b7ac000-2b9a5b7b3000 rwxp 00166000 00:19 79474823                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/libmpifort.so.12.0
+2b9a5b7b3000-2b9a5b7d8000 rwxp 00000000 00:00 0 
+2b9a5b7d8000-2b9a5bd15000 r-xp 00000000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b9a5bd15000-2b9a5bf15000 ---p 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b9a5bf15000-2b9a5bf47000 rwxp 0053d000 00:19 80069394                   /lrz/mnt/sys.x86_64/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/lib/release_mt/libmpi.so.12.0
+2b9a5bf47000-2b9a5bf9a000 rwxp 00000000 00:00 0 
+2b9a5bf9a000-2b9a5bf9c000 r-xp 00000000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9a5bf9c000-2b9a5c19c000 ---p 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9a5c19c000-2b9a5c19d000 r-xp 00002000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9a5c19d000-2b9a5c19e000 rwxp 00003000 00:10 43320                      /lib64/libdl-2.11.3.so
+2b9a5c19e000-2b9a5c1a6000 r-xp 00000000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9a5c1a6000-2b9a5c3a5000 ---p 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9a5c3a5000-2b9a5c3a6000 r-xp 00007000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9a5c3a6000-2b9a5c3a7000 rwxp 00008000 00:10 43277                      /lib64/librt-2.11.3.so
+2b9a5c3a7000-2b9a5c3a8000 rwxp 00000000 00:00 0 
+2b9a5c3a8000-2b9a5c3e1000 r-xp 00000000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b9a5c3e1000-2b9a5c5e0000 ---p 00039000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b9a5c5e0000-2b9a5c5e2000 rwxp 00038000 00:19 70063875                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5
+2b9a5c5e2000-2b9a5c5e3000 rwxp 00000000 00:00 0 
+2b9a5c5e3000-2b9a5c61f000 r-xp 00000000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9a5c61f000-2b9a5c81e000 ---p 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9a5c81e000-2b9a5c81f000 r-xp 0003b000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9a5c81f000-2b9a5c821000 rwxp 0003c000 00:19 84953497                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libcilkrts.so.5
+2b9a5c821000-2b9a5c824000 rwxp 00000000 00:00 0 
+2b9a5c824000-2b9a5c90c000 r-xp 00000000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9a5c90c000-2b9a5cb0b000 ---p 000e8000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9a5cb0b000-2b9a5cb13000 r-xp 000e7000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9a5cb13000-2b9a5cb15000 rwxp 000ef000 00:10 43863                      /usr/lib64/libstdc++.so.6.0.17
+2b9a5cb15000-2b9a5cb2b000 rwxp 00000000 00:00 0 
+2b9a5cb2b000-2b9a5cb40000 r-xp 00000000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9a5cb40000-2b9a5cd3f000 ---p 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9a5cd3f000-2b9a5cd40000 r-xp 00014000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9a5cd40000-2b9a5cd41000 rwxp 00015000 00:10 43081                      /lib64/libgcc_s.so.1
+2b9a5cd41000-2b9a5ceaf000 r-xp 00000000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9a5ceaf000-2b9a5d0ae000 ---p 0016e000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9a5d0ae000-2b9a5d0b2000 r-xp 0016d000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9a5d0b2000-2b9a5d0b3000 rwxp 00171000 00:10 43296                      /lib64/libc-2.11.3.so
+2b9a5d0b3000-2b9a5d0b9000 rwxp 00000000 00:00 0 
+2b9a5d0b9000-2b9a5d333000 r-xp 00000000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b9a5d333000-2b9a5d532000 ---p 0027a000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b9a5d532000-2b9a5d574000 rwxp 00279000 00:19 84953498                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libimf.so
+2b9a5d574000-2b9a5e210000 r-xp 00000000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b9a5e210000-2b9a5e40f000 ---p 00c9c000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b9a5e40f000-2b9a5e447000 rwxp 00c9b000 00:19 70063879                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libsvml.so
+2b9a5e447000-2b9a5e44c000 r-xp 00000000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b9a5e44c000-2b9a5e64c000 ---p 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b9a5e64c000-2b9a5e64e000 rwxp 00005000 00:19 70063872                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libirng.so
+2b9a5e64e000-2b9a5e64f000 rwxp 00000000 00:00 0 
+2b9a5e64f000-2b9a5e6ab000 r-xp 00000000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b9a5e6ab000-2b9a5e8aa000 ---p 0005c000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b9a5e8aa000-2b9a5e8ac000 rwxp 0005b000 00:19 84953500                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/libintlc.so.5
+2b9a5e8ac000-2b9a5e8b2000 rwxp 00000000 00:00 0 
+2b9a5e8b2000-2b9a5e924000 r-xp 00000000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b9a5e924000-2b9a5eb24000 ---p 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b9a5eb24000-2b9a5eb28000 rwxp 00072000 00:10 44404                      /usr/lib64/libcoi_host.so.0
+2b9a5eb28000-2b9a5eb37000 rwxp 00000000 00:00 0 
+2b9a5eb37000-2b9a5eb39000 r-xp 00000000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b9a5eb39000-2b9a5ed38000 ---p 00002000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b9a5ed38000-2b9a5ed39000 rwxp 00001000 00:10 45351                      /usr/lib64/libscif.so.0.0.1
+2b9a5ed39000-2b9a5ed3a000 ---p 00000000 00:00 0 
+2b9a5ed3a000-2b9a5ef3a000 rwxp 00000000 00:00 0 
+2b9a5ef44000-2b9a5ef50000 r-xp 00000000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9a5ef50000-2b9a5f14f000 ---p 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9a5f14f000-2b9a5f150000 r-xp 0000b000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9a5f150000-2b9a5f151000 rwxp 0000c000 00:10 43092                      /lib64/libnss_files-2.11.3.so
+2b9a5f151000-2b9a5f165000 r-xp 00000000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9a5f165000-2b9a5f364000 ---p 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9a5f364000-2b9a5f365000 r-xp 00013000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9a5f365000-2b9a5f366000 rwxp 00014000 00:10 43087                      /lib64/libnss_ldap.so.2
+2b9a5f366000-2b9a5f372000 rwxp 00000000 00:00 0 
+2b9a5f372000-2b9a5f3b8000 r-xp 00000000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9a5f3b8000-2b9a5f5b8000 ---p 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9a5f5b8000-2b9a5f5b9000 r-xp 00046000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9a5f5b9000-2b9a5f5bb000 rwxp 00047000 00:10 45905                      /usr/lib64/libldap-2.4.so.2.7.1
+2b9a5f5bb000-2b9a5f5c9000 r-xp 00000000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9a5f5c9000-2b9a5f7c8000 ---p 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9a5f7c8000-2b9a5f7c9000 r-xp 0000d000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9a5f7c9000-2b9a5f7ca000 rwxp 0000e000 00:10 47668                      /usr/lib64/liblber-2.4.so.2.7.1
+2b9a5f7ca000-2b9a5f7e3000 r-xp 00000000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9a5f7e3000-2b9a5f9e3000 ---p 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9a5f9e3000-2b9a5f9e4000 r-xp 00019000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9a5f9e4000-2b9a5f9e5000 rwxp 0001a000 00:10 44496                      /usr/lib64/libsasl2.so.2.0.22
+2b9a5f9e5000-2b9a5fa83000 r-xp 00000000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9a5fa83000-2b9a5fc82000 ---p 0009e000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9a5fc82000-2b9a5fc85000 r-xp 0009d000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9a5fc85000-2b9a5fc87000 rwxp 000a0000 00:10 44010                      /usr/lib64/libkrb5.so.3.3
+2b9a5fc87000-2b9a5fc8a000 r-xp 00000000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9a5fc8a000-2b9a5fe89000 ---p 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9a5fe89000-2b9a5fe8a000 r-xp 00002000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9a5fe8a000-2b9a5fe8b000 rwxp 00003000 00:10 43344                      /lib64/libcom_err.so.2.1
+2b9a5fe8b000-2b9a5feb6000 r-xp 00000000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9a5feb6000-2b9a600b6000 ---p 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9a600b6000-2b9a600b7000 r-xp 0002b000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9a600b7000-2b9a600b8000 rwxp 0002c000 00:10 45449                      /usr/lib64/libgssapi_krb5.so.2.2
+2b9a600b8000-2b9a600cd000 r-xp 00000000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9a600cd000-2b9a602cc000 ---p 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9a602cc000-2b9a602cd000 r-xp 00014000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9a602cd000-2b9a602ce000 rwxp 00015000 00:10 43212                      /lib64/libnsl-2.11.3.so
+2b9a602ce000-2b9a602d0000 rwxp 00000000 00:00 0 
+2b9a602d0000-2b9a602e3000 r-xp 00000000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9a602e3000-2b9a604e3000 ---p 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9a604e3000-2b9a604e4000 r-xp 00013000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9a604e4000-2b9a604e5000 rwxp 00014000 00:10 43332                      /lib64/libresolv-2.11.3.so
+2b9a604e5000-2b9a604e7000 rwxp 00000000 00:00 0 
+2b9a604e7000-2b9a60536000 r-xp 00000000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9a60536000-2b9a60735000 ---p 0004f000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9a60735000-2b9a60737000 r-xp 0004e000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9a60737000-2b9a6073d000 rwxp 00050000 00:10 44742                      /usr/lib64/libssl.so.0.9.8
+2b9a6073d000-2b9a608b0000 r-xp 00000000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9a608b0000-2b9a60aaf000 ---p 00173000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9a60aaf000-2b9a60abf000 r-xp 00172000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9a60abf000-2b9a60ad8000 rwxp 00182000 00:10 45430                      /usr/lib64/libcrypto.so.0.9.8
+2b9a60ad8000-2b9a60adc000 rwxp 00000000 00:00 0 
+2b9a60adc000-2b9a60b00000 r-xp 00000000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9a60b00000-2b9a60cff000 ---p 00024000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9a60cff000-2b9a60d01000 r-xp 00023000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9a60d01000-2b9a60d02000 rwxp 00025000 00:10 44743                      /usr/lib64/libk5crypto.so.3.1
+2b9a60d02000-2b9a60d09000 r-xp 00000000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9a60d09000-2b9a60f09000 ---p 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9a60f09000-2b9a60f0a000 r-xp 00007000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9a60f0a000-2b9a60f0b000 rwxp 00008000 00:10 43992                      /usr/lib64/libkrb5support.so.0.1
+2b9a60f0b000-2b9a60f0d000 r-xp 00000000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9a60f0d000-2b9a6110c000 ---p 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9a6110c000-2b9a6110d000 r-xp 00001000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9a6110d000-2b9a6110e000 rwxp 00002000 00:10 43279                      /lib64/libkeyutils-1.2.so
+2b9a6110e000-2b9a61123000 r-xp 00000000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9a61123000-2b9a61322000 ---p 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9a61322000-2b9a61323000 r-xp 00014000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9a61323000-2b9a61324000 rwxp 00015000 00:10 43101                      /lib64/libz.so.1.2.7
+2b9a61324000-2b9a68b25000 rwxs 00000000 00:12 47104767                   /dev/shm/Intel_MPI_uzLnLQ (deleted)
+2b9a68b25000-2b9a68b26000 -w-s 101ffa52000 00:10 78481                   /dev/infiniband/uverbs0
+2b9a68b26000-2b9a68b27000 -w-s 101ffe52000 00:10 78481                   /dev/infiniband/uverbs0
+2b9a68b27000-2b9a68b29000 rwxp 00000000 00:00 0 
+2b9a68b2f000-2b9a68b39000 r-xp 00000000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9a68b39000-2b9a68d39000 ---p 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9a68d39000-2b9a68d3a000 r-xp 0000a000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9a68d3a000-2b9a68d3b000 rwxp 0000b000 00:10 44691                      /usr/lib64/libdat2.so.2.0.0
+2b9a68d3b000-2b9a68d5f000 r-xp 00000000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9a68d5f000-2b9a68f5e000 ---p 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9a68f5e000-2b9a68f5f000 r-xp 00023000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9a68f5f000-2b9a68f60000 rwxp 00024000 00:10 43817                      /usr/lib64/libdaploucm.so.2.0.0
+2b9a68f60000-2b9a68f73000 r-xp 00000000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9a68f73000-2b9a69173000 ---p 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9a69173000-2b9a69174000 r-xp 00013000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9a69174000-2b9a69175000 rwxp 00014000 00:10 43873                      /usr/lib64/libibverbs.so.1.0.0
+2b9a69175000-2b9a691c1000 r-xp 00000000 00:10 43186                      /lib64/libnl.so.1.1
+2b9a691c1000-2b9a693c1000 ---p 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b9a693c1000-2b9a693c2000 r-xp 0004c000 00:10 43186                      /lib64/libnl.so.1.1
+2b9a693c2000-2b9a693c7000 rwxp 0004d000 00:10 43186                      /lib64/libnl.so.1.1
+2b9a693c7000-2b9a693ca000 r-xp 00000000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9a693ca000-2b9a695c9000 ---p 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9a695c9000-2b9a695ca000 r-xp 00002000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9a695ca000-2b9a695cb000 rwxp 00003000 00:10 44662                      /usr/lib64/libibscif-rdmav2.so
+2b9a695cb000-2b9a695d9000 r-xp 00000000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9a695d9000-2b9a697d9000 ---p 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9a697d9000-2b9a697da000 r-xp 0000e000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9a697da000-2b9a697db000 rwxp 0000f000 00:10 44339                      /usr/lib64/libmlx4-rdmav2.so
+2b9a697db000-2b9a698a3000 rwxp 00000000 00:00 0 
+2b9a698c0000-2b9a698e0000 rwxs 01102000 00:10 78481                      /dev/infiniband/uverbs0
+2b9a698e0000-2b9a69b3c000 rwxp 00000000 00:00 0 
+2b9a69b3c000-2b9a69b3d000 ---p 00000000 00:00 0 
+2b9a69b3d000-2b9a69d3d000 rwxp 00000000 00:00 0 
+2b9a6a46a000-2b9a6a46b000 ---p 00000000 00:00 0 
+2b9a6a46b000-2b9a6a66b000 rwxp 00000000 00:00 0 
+2b9a6a66b000-2b9a6a66c000 rwxs 00000000 00:04 47068464                   /dev/zero (deleted)
+2b9a6a66c000-2b9a6a675000 rwxs 00000000 00:04 47068465                   /dev/zero (deleted)
+2b9a6a675000-2b9a6a676000 ---p 00000000 00:00 0 
+2b9a6a676000-2b9a6a876000 rwxp 00000000 00:00 0 
+2b9a6a876000-2b9a6a877000 rwxs 00000000 00:04 47068466                   /dev/zero (deleted)
+2b9a6a877000-2b9a6a878000 ---p 00000000 00:00 0 
+2b9a6a878000-2b9a6aa78000 rwxp 00000000 00:00 0 
+2b9a6b1a5000-2b9a6b1a6000 ---p 00000000 00:00 0 
+2b9a6b1a6000-2b9a6b3a6000 rwxp 00000000 00:00 0 
+2b9a6b3a6000-2b9a6b3a7000 rwxs 00000000 00:04 47068467                   /dev/zero (deleted)
+2b9a6b3a7000-2b9a6b3b0000 rwxs 00000000 00:04 47068468                   /dev/zero (deleted)
+2b9a6b3b0000-2b9a6b3b1000 ---p 00000000 00:00 0 
+2b9a6b3b1000-2b9a6b5b1000 rwxp 00000000 00:00 0 
+2b9a6b5b1000-2b9a6b5b2000 rwxs 00000000 00:04 47068469                   /dev/zero (deleted)
+2b9a6b5b2000-2b9a6fffb000 rwxp 00000000 00:00 0 
+2b9a6fffb000-2b9a74a43000 rwxp 00000000 00:00 0 
+2b9a74a43000-2b9a95f31000 rwxp 00000000 00:00 0 
+2b9a95f31000-2b9ab741d000 rwxp 00000000 00:00 0 
+2b9ab741d000-2b9ab741e000 rwxp 00000000 00:00 0 
+2b9ab8000000-2b9ab8021000 rwxp 00000000 00:00 0 
+2b9ab8021000-2b9abc000000 ---p 00000000 00:00 0 
+7fff9f1cb000-7fff9f1ef000 rwxp 00000000 00:00 0                          [stack]
+7fff9f1ff000-7fff9f200000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** glibc detected *** ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector: malloc(): memory corruption: 0x00002b67bdaa7e10 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x76628)[0x2b67bd7ab628]
+/lib64/libc.so.6(+0x795df)[0x2b67bd7ae5df]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2b67bd7b06b7]
+/usr/lib64/libstdc++.so.6(_Znwm+0x1d)[0x2b67bd27c08d]
+/usr/lib64/libcoi_host.so.0(+0x214d1)[0x2b67bf2c74d1]
+/usr/lib64/libcoi_host.so.0(+0x1edb5)[0x2b67bf2c4db5]
+/usr/lib64/libcoi_host.so.0(+0x1a7a2)[0x2b67bf2c07a2]
+/usr/lib64/libcoi_host.so.0(COIBufferSetState+0x16b)[0x2b67bf2b778b]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x17ea2)[0x2b67bcdb3ea2]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x11d3a)[0x2b67bcdadd3a]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0x101c7)[0x2b67bcdac1c7]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(+0xf98c)[0x2b67bcdab98c]
+/lrz/sys/intel/compiler/composer_xe_2015.5.223/compiler/lib/intel64/liboffload.so.5(__offload_offload1+0x52)[0x2b67bcdbd792]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x7759ac]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x88a583]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x822c53]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x80a0e2]
+../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector[0x1189bff]

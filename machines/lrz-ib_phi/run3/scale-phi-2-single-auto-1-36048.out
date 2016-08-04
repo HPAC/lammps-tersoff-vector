@@ -1,0 +1,106 @@
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+i01r13a15-ib
+LAMMPS (10 Mar 2016)
+  using 1 OpenMP thread(s) per MPI task
+Intel Package: Affinitizing MPI Tasks to 2 Cores Each
+Intel Package: Affinitizing MPI Tasks to 2 Cores Each
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (434.48 434.48 217.24)
+  2 by 4 by 2 MPI processor grid
+Created 2048000 atoms
+----------------------------------------------------------
+Using Intel Coprocessor with 4 threads per core, 29 threads per task
+Precision: single
+----------------------------------------------------------
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 207 207 104
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 644.392 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -9483103.4            0   -9218378.8    7019.0775 
+     100    428.48597   -9331639.7            0   -9218208.9   -14378.009 
+     200    543.53398   -9362087.2            0   -9218200.3   -1842.0749 
+     300     493.2779   -9348766.4            0   -9218183.5   -3966.2585 
+     400    496.78197   -9349689.5            0     -9218179   -2856.9789 
+     500     483.5129   -9346174.9            0   -9218177.1   -3005.0404 
+     600    469.35898   -9342427.6            0   -9218176.8    -4805.549 
+     700    498.17829   -9350059.5            0   -9218179.4   -2261.7242 
+     800    486.44794   -9346954.3            0   -9218179.6   -3722.4129 
+     900    490.99454   -9348157.5            0   -9218179.1   -2991.9249 
+    1000    480.82709   -9345465.2            0   -9218178.4   -3904.1388 
+    1100    489.58429   -9347784.2            0   -9218179.2    -3212.168 
+    1200    490.13272   -9347929.5            0   -9218179.3   -3105.1493 
+    1300    486.95025   -9347086.8            0   -9218179.1   -3489.0911 
+    1400    487.16326     -9347143            0   -9218178.9    -3281.754 
+    1500    486.78907   -9347044.1            0   -9218179.1   -3449.6161 
+    1600    488.82629   -9347582.9            0   -9218178.5   -3140.1943 
+    1700    487.97068   -9347356.8            0   -9218178.9   -3301.9837 
+    1800    486.20191   -9346888.8            0   -9218179.1   -3392.4395 
+    1900    488.77418   -9347569.4            0   -9218178.8   -3152.4462 
+    2000    486.09931   -9346861.2            0   -9218178.7   -3409.2542 
+Loop time of 124.53 on 16 procs for 2000 steps with 2048000 atoms
+
+Performance: 1.388 ns/day, 17.296 hours/ns, 16.060 timesteps/s
+101.7% CPU use with 16 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 93.556     | 96.536     | 102.03     |  26.3 | 77.52
+Neigh   | 2.6831     | 2.8027     | 2.9496     |   4.9 |  2.25
+Comm    | 7.5085     | 12.508     | 15.91      |  74.9 | 10.04
+Output  | 0.025868   | 0.037915   | 0.060815   |   7.1 |  0.03
+Modify  | 4.691      | 6.2557     | 6.9201     |  35.6 |  5.02
+Other   |            | 6.389      |            |       |  5.13
+
+Nlocal:    128000 ave 128155 max 127837 min
+Histogram: 2 0 2 2 1 2 3 2 0 2
+Nghost:    27984.4 ave 28128 max 27855 min
+Histogram: 1 1 1 3 2 5 1 1 0 1
+Neighs:    0 ave 0 max 0 min
+Histogram: 16 0 0 0 0 0 0 0 0 0
+FullNghs:  363692 ave 392250 max 344175 min
+Histogram: 1 4 2 1 3 1 2 0 1 1
+
+Total # of neighbors = 5819066
+Ave neighs/atom = 2.84134
+Neighbor list builds = 76
+Dangerous builds = 0
+
+------------------------------------------------
+               Offload Timing Data
+------------------------------------------------
+  Data Pack/Cast Seconds    5.911618
+  Host Neighbor Seconds     2.427294
+  Host Pair Seconds         86.731624
+  Offload Neighbor Seconds  3.951880
+  Offload Pair Seconds      76.763446
+  Offload Wait Seconds      3.352475
+  Offload Latency Seconds   0.734458
+  Offload Neighbor Balance  0.827761
+  Offload Pair Balance      0.827618
+  Offload Ghost Atoms       Yes
+------------------------------------------------
+Total wall time: 0:02:25

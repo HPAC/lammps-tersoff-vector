@@ -1,0 +1,74 @@
+LAMMPS (10 Mar 2016)
+  using 1 OpenMP thread(s) per MPI task
+Intel Package: Affinitizing MPI Tasks to 2 Cores Each
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (434.48 434.48 217.24)
+  4 by 8 by 4 MPI processor grid
+Created 2048000 atoms
+----------------------------------------------------------
+Using Intel Package without Coprocessor.
+Precision: single
+----------------------------------------------------------
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 207 207 104
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 72.2965 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -9482368.7            0   -9217644.1    7018.4293 
+     100    428.47655   -9331638.5            0   -9218210.2   -14378.186 
+     200    543.53318   -9362085.8            0   -9218199.2   -1842.3335 
+     300    493.28391   -9348764.1            0   -9218179.7   -3966.8702 
+     400    496.79289     -9349687            0   -9218173.7   -2857.8475 
+     500    483.53003   -9346170.2            0   -9218167.9   -3005.5791 
+     600    469.37851   -9342419.1            0   -9218163.1   -4806.4386 
+     700    498.20456   -9350050.2            0   -9218163.2   -2262.1357 
+     800    486.47944   -9346943.8            0   -9218160.7   -3723.2571 
+     900    491.02841   -9348147.3            0     -9218160   -2993.2146 
+    1000    480.86673   -9345453.1            0   -9218155.8   -3905.9402 
+    1100    489.63165   -9347773.5            0   -9218155.9   -3212.9358 
+    1200    490.17728   -9347915.2            0   -9218153.1   -3106.5324 
+    1300    487.00153   -9347071.5            0   -9218150.2   -3490.5133 
+    1400    487.21364   -9347125.4            0     -9218148   -3283.2465 
+    1500     486.8496   -9347026.4            0   -9218145.3   -3451.1223 
+    1600     488.8876   -9347561.8            0   -9218141.2   -3141.4161 
+    1700    488.04125   -9347338.1            0   -9218141.6   -3303.4311 
+    1800    486.27316   -9346866.9            0   -9218138.4    -3394.195 
+    1900    488.85508   -9347547.4            0   -9218135.5    -3153.979 
+    2000    486.18779   -9346837.6            0   -9218131.7   -3410.7624 
+Loop time of 99.2262 on 128 procs for 2000 steps with 2048000 atoms
+
+Performance: 1.741 ns/day, 13.781 hours/ns, 20.156 timesteps/s
+99.5% CPU use with 128 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 54.585     | 56.21      | 95.145     |  77.8 | 56.65
+Neigh   | 1.6541     | 1.6795     | 2.1137     |   5.0 |  1.69
+Comm    | 1.1238     | 26.439     | 41.909     | 303.6 | 26.64
+Output  | 0.0044701  | 0.17541    | 0.40755    |  43.2 |  0.18
+Modify  | 0.27202    | 0.31901    | 0.40431    |   4.7 |  0.32
+Other   |            | 14.4       |            |       | 14.52
+
+Nlocal:    16000 ave 16079 max 15914 min
+Histogram: 1 1 19 12 25 23 22 18 6 1
+Nghost:    7460.78 ave 7532 max 7378 min
+Histogram: 1 2 8 18 24 32 21 11 5 6
+Neighs:    0 ave 0 max 0 min
+Histogram: 128 0 0 0 0 0 0 0 0 0
+FullNghs:  263761 ave 265388 max 262293 min
+Histogram: 8 10 9 17 23 22 20 13 5 1
+
+Total # of neighbors = 33761468
+Ave neighs/atom = 16.4851
+Neighbor list builds = 76
+Dangerous builds = 0
+Total wall time: 0:01:42

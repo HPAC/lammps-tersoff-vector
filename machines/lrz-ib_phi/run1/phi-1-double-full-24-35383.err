@@ -1,0 +1,10 @@
+You don't exist, go away!
+You don't exist, go away!
+You don't exist, go away!
+You don't exist, go away!
+[mpiexec@i01r13c05] HYDU_sock_write (../../utils/sock/sock.c:417): write error (Bad file descriptor)
+[mpiexec@i01r13c05] HYD_pmcd_pmiserv_send_signal (../../pm/pmiserv/pmiserv_cb.c:252): unable to write data to proxy
+[mpiexec@i01r13c05] ui_cmd_cb (../../pm/pmiserv/pmiserv_pmci.c:174): unable to send signal downstream
+[mpiexec@i01r13c05] HYDT_dmxu_poll_wait_for_event (../../tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@i01r13c05] HYD_pmci_wait_for_completion (../../pm/pmiserv/pmiserv_pmci.c:500): error waiting for event
+[mpiexec@i01r13c05] main (../../ui/mpich/mpiexec.c:1125): process manager error waiting for completion

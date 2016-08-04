@@ -1,0 +1,25 @@
+#!/bin/bash
+#@ wall_clock_limit = 00:30:00
+#@ job_name = 12-scale-phi-1-double-auto
+#@ job_type = parallel
+#@ class = phi
+#@ node = 12
+#@ tasks_per_node = 16
+#@ node_usage = not_shared
+#@ initialdir = /home/hpc/pr92ka/di49reb/tersoff-sc16-new/machines/lrz-ib_phi/run/../../../benchmarks/lammps
+#@ output = /home/hpc/pr92ka/di49reb/tersoff-sc16-new/machines/lrz-ib_phi/run/scale-phi-1-double-auto-12-$(jobid).out
+#@ error  = /home/hpc/pr92ka/di49reb/tersoff-sc16-new/machines/lrz-ib_phi/run/scale-phi-1-double-auto-12-$(jobid).err
+#@ queue
+
+. /etc/profile
+. /etc/profile.d/modules.sh
+
+module unload intel
+module load intel/15.0
+
+module list
+
+cat $LOADL_HOSTFILE
+
+export I_MPI_DAPL_PROVIDER_LIST=ofa-v2-mlx4_0-1u
+mpiexec ../../machines/lrz-ib_phi/lammps-10Mar16/src/lmp_intel_phi_default_vector -in in.tersoff_2e6 -pk intel 1 mode double balance -1.000000 -sf intel
