@@ -14,11 +14,11 @@ if len(sys.argv) == 1:
 lammps = sys.argv[1]
 
 class RandomExperiment():
-    def __init__(self):
-        self.pot = ("BNC", ["B", "N", "C"])
+    def __init__(self, pot):
+        self.pot = pot #("BNC", ["B", "N", "C"])
         self.density = 90000. / (60 * 60 * 60 * 8)
         self.ntotal = 600
-	self.name = "Random High-Density BNC"
+	self.name = "Random High-Density "+pot[0]
     def get_script(self, pair, pkg, data, suffix):
         data_str = "\n".join(map(lambda d: d.get_commands(suffix), data))
         pot_file, parts = self.pot
@@ -228,7 +228,7 @@ class FloatChecker():
 	self.is_exact = is_exact
 	self.early_end = early_end
     def report(self, what):
-        msg = "%15s. %40s     [%1d%1d%1d %10e,%10e]\033[0m" % (what, self.get_message(), self.is_exact, self.found_nan, self.early_end, self.max_relative_error, self.max_absolute_error)
+        msg = "%15s. %40s     [%1s%1s%1s %10e,%10e]\033[0m" % (what, self.get_message(), 'E' if self.is_exact else 'I', 'N' if self.found_nan else 'R', 'A' if self.early_end else 'D', self.max_relative_error, self.max_absolute_error)
         if self.is_correct():
             print "\033[32mSUCCESS: " + msg
 	else:
@@ -245,7 +245,7 @@ class ExactChecker(FloatChecker):
     def get_message(self): return "Exact"
 
 if __name__ == "__main__":
-    for experiment in [BulkSiStartExperiment(), RandomExperiment()]:
+    for experiment in [BulkSiStartExperiment(), RandomExperiment(("BNC", ["B", "N", "C"])), RandomExperiment(("GaN", ["Ga", "N"]))]:
         test = Test()
         if len(sys.argv) == 3 and sys.argv[2] == 'retain': test.cleanup = False
         test.set_reference(Tersoff())

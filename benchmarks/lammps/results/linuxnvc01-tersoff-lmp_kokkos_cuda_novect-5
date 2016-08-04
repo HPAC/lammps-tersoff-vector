@@ -1,0 +1,52 @@
+LAMMPS (10 Mar 2016)
+KOKKOS mode is enabled (../kokkos.cpp:36)
+  using 1 GPU(s)
+  using 0 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (108.62 108.62 54.31)
+  1 by 1 by 1 MPI processor grid
+Created 32000 atoms
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 52 52 26
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 6.67195 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -148173.19            0   -144036.99    7019.4434 
+     100    430.57813   -145815.61            0   -144034.65   -14550.734 
+Loop time of 2.32101 on 0 procs for 100 steps with 32000 atoms
+
+Performance: 3.723 ns/day, 6.447 hours/ns, 43.085 timesteps/s
+76.4% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 2.0278     | 2.0278     | 2.0278     |   0.0 | 87.37
+Neigh   | 0.10242    | 0.10242    | 0.10242    |   0.0 |  4.41
+Comm    | 0.15216    | 0.15216    | 0.15216    |   0.0 |  6.56
+Output  | 0.00016093 | 0.00016093 | 0.00016093 |   0.0 |  0.01
+Modify  | 0.025583   | 0.025583   | 0.025583   |   0.0 |  1.10
+Other   |            | 0.01289    |            |       |  0.56
+
+Nlocal:    32000 ave 32000 max 32000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    11537 ave 11537 max 11537 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  530500 ave 530500 max 530500 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 530500
+Ave neighs/atom = 16.5781
+Neighbor list builds = 2
+Dangerous builds = 0
+Total wall time: 0:00:05

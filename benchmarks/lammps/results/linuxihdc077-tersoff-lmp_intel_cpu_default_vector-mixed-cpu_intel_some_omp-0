@@ -1,0 +1,54 @@
+LAMMPS (10 Mar 2016)
+  using 12 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (108.62 108.62 54.31)
+  1 by 2 by 1 MPI processor grid
+Created 32000 atoms
+----------------------------------------------------------
+Using Intel Package without Coprocessor.
+Precision: mixed
+----------------------------------------------------------
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 52 52 26
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 92.5686 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -148173.17            0   -144036.98    7019.5462 
+     100    430.58206   -145815.63            0   -144034.66   -14550.732 
+Loop time of 0.262468 on 24 procs for 100 steps with 32000 atoms
+
+Performance: 32.918 ns/day, 0.729 hours/ns, 380.998 timesteps/s
+685.1% CPU use with 2 MPI tasks x 12 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.15984    | 0.16828    | 0.17672    |   2.1 | 64.11
+Neigh   | 0.005414   | 0.00597    | 0.006526   |   0.7 |  2.27
+Comm    | 0.050402   | 0.059378   | 0.068354   |   3.7 | 22.62
+Output  | 6.6042e-05 | 6.8545e-05 | 7.1049e-05 |   0.0 |  0.03
+Modify  | 0.017061   | 0.017127   | 0.017193   |   0.1 |  6.53
+Other   |            | 0.01165    |            |       |  4.44
+
+Nlocal:    16000 ave 16007 max 15993 min
+Histogram: 1 0 0 0 0 0 0 0 0 1
+Nghost:    7405 ave 7408 max 7402 min
+Histogram: 1 0 0 0 0 0 0 0 0 1
+Neighs:    0 ave 0 max 0 min
+Histogram: 2 0 0 0 0 0 0 0 0 0
+FullNghs:  265250 ave 265348 max 265152 min
+Histogram: 1 0 0 0 0 0 0 0 0 1
+
+Total # of neighbors = 530500
+Ave neighs/atom = 16.5781
+Neighbor list builds = 2
+Dangerous builds = 0
+Total wall time: 0:00:00

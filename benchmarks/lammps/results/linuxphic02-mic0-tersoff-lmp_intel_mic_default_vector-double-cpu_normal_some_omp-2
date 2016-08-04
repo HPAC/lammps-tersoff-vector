@@ -1,0 +1,53 @@
+LAMMPS (10 Mar 2016)
+  using 30 OpenMP thread(s) per MPI task
+using multi-threaded neighbor list subroutines
+using multi-threaded neighbor list subroutines
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (108.62 108.62 54.31)
+  2 by 2 by 2 MPI processor grid
+Created 32000 atoms
+Last active /omp style is pair_style tersoff/omp
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 52 52 26
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 17.2234 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -148173.19            0   -144036.99    7019.4434 
+     100    430.57813   -145815.61            0   -144034.65   -14550.734 
+Loop time of 1.47391 on 240 procs for 100 steps with 32000 atoms
+
+Performance: 5.862 ns/day, 4.094 hours/ns, 67.847 timesteps/s
+2960.2% CPU use with 8 MPI tasks x 30 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.069      | 1.0836     | 1.0997     |   1.1 | 73.52
+Neigh   | 0.010021   | 0.010228   | 0.010527   |   0.2 |  0.69
+Comm    | 0.222      | 0.23904    | 0.25277    |   2.3 | 16.22
+Output  | 0.00071096 | 0.00088209 | 0.0011549  |   0.4 |  0.06
+Modify  | 0.066198   | 0.066889   | 0.067514   |   0.2 |  4.54
+Other   |            | 0.0733     |            |       |  4.97
+
+Nlocal:    4000 ave 4030 max 3975 min
+Histogram: 1 1 2 0 0 1 1 1 0 1
+Nghost:    3176.62 ave 3213 max 3138 min
+Histogram: 1 0 1 1 1 1 1 1 0 1
+Neighs:    0 ave 0 max 0 min
+Histogram: 8 0 0 0 0 0 0 0 0 0
+FullNghs:  66312.5 ave 66900 max 65885 min
+Histogram: 1 1 1 1 2 0 1 0 0 1
+
+Total # of neighbors = 530500
+Ave neighs/atom = 16.5781
+Neighbor list builds = 2
+Dangerous builds = 0
+Total wall time: 0:00:01

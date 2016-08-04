@@ -1,0 +1,142 @@
+LAMMPS (10 Mar 2016)
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (217.24 217.24 217.24)
+  1 by 1 by 1 MPI processor grid
+Created 512000 atoms
+
+--------------------------------------------------------------------------
+- Using acceleration for tersoff/gpu:
+-  with 1 proc(s) per device.
+--------------------------------------------------------------------------
+Device 0: Tesla K40c, 15 CUs, 11/11 GB, 0.74 GHZ (Single Precision)
+--------------------------------------------------------------------------
+
+Initializing Device and compiling on process 0...Done.
+Initializing Device 0 on core 0...Done.
+
+Neighbor list info ...
+  0 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 7.4
+  binsize = 2.1, bins = 104 104 104
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 99.5776 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -2370770.7            0   -2304589.6    7019.7478 
+      10    619.66722   -2345543.5            0   -2304533.3    12474.183 
+Loop time of 1.12948 on 1 procs for 10 steps with 512000 atoms
+
+Performance: 0.765 ns/day, 31.375 hours/ns, 8.854 timesteps/s
+87.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.96056    | 0.96056    | 0.96056    |   0.0 | 85.04
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.026275   | 0.026275   | 0.026275   |   0.0 |  2.33
+Output  | 0.002182   | 0.002182   | 0.002182   |   0.0 |  0.19
+Modify  | 0.090958   | 0.090958   | 0.090958   |   0.0 |  8.05
+Other   |            | 0.04951    |            |       |  4.38
+
+Nlocal:    512000 ave 512000 max 512000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    113091 ave 113091 max 113091 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 0
+Ave neighs/atom = 0
+Neighbor list builds = 0
+Dangerous builds = 0
+
+
+---------------------------------------------------------------------
+      Device Time Info (average): 
+---------------------------------------------------------------------
+Data Transfer:   0.0221 s.
+Data Cast/Pack:  0.0918 s.
+Neighbor copy:   0.0000 s.
+Neighbor build:  0.0872 s.
+Force calc:      0.7186 s.
+Device Overhead: 0.0008 s.
+Average split:   1.0000.
+Threads / atom:  4.
+Max Mem / Proc:  3186.36 MB.
+CPU Driver_Time: 0.0008 s.
+CPU Idle_Time:   0.9750 s.
+---------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+- Using acceleration for tersoff/gpu:
+-  with 1 proc(s) per device.
+--------------------------------------------------------------------------
+Device 0: Tesla K40c, 15 CUs, 11/11 GB, 0.74 GHZ (Single Precision)
+--------------------------------------------------------------------------
+
+Initializing Device and compiling on process 0...Done.
+Initializing Device 0 on core 0...Done.
+
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 10
+  Time step   : 0.001
+Memory usage per processor = 99.6101 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+      10    619.66722   -2345543.5            0   -2304533.3    12474.183 
+    2430    488.05019   -2336840.6            0   -2304540.9   -3110.1915 
+Loop time of 342.34 on 1 procs for 2420 steps with 512000 atoms
+
+Performance: 0.611 ns/day, 39.295 hours/ns, 7.069 timesteps/s
+87.3% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 285.98     | 285.98     | 285.98     |   0.0 | 83.54
+Neigh   | 0.34673    | 0.34673    | 0.34673    |   0.0 |  0.10
+Comm    | 10.461     | 10.461     | 10.461     |   0.0 |  3.06
+Output  | 0.0027599  | 0.0027599  | 0.0027599  |   0.0 |  0.00
+Modify  | 25.871     | 25.871     | 25.871     |   0.0 |  7.56
+Other   |            | 19.68      |            |       |  5.75
+
+Nlocal:    512000 ave 512000 max 512000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    113089 ave 113089 max 113089 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 0
+Ave neighs/atom = 0
+Neighbor list builds = 87
+Dangerous builds = 0
+
+
+---------------------------------------------------------------------
+      Device Time Info (average): 
+---------------------------------------------------------------------
+Data Transfer:   4.2691 s.
+Data Cast/Pack:  22.6233 s.
+Neighbor copy:   0.0002 s.
+Neighbor build:  4.4884 s.
+Force calc:      189.3532 s.
+Device Overhead: 0.1057 s.
+Average split:   1.0000.
+Threads / atom:  4.
+Max Mem / Proc:  3704.04 MB.
+CPU Driver_Time: 0.1123 s.
+CPU Idle_Time:   258.5637 s.
+---------------------------------------------------------------------
+
+
+Please see the log.cite file for references relevant to this simulation
+
+Total wall time: 0:05:48

@@ -1,0 +1,94 @@
+LAMMPS (10 Mar 2016)
+  using 8 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (217.24 217.24 217.24)
+  1 by 1 by 2 MPI processor grid
+Created 512000 atoms
+----------------------------------------------------------
+Using Intel Package without Coprocessor.
+Precision: mixed
+----------------------------------------------------------
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 104 104 104
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 1269.88 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000     -2370771            0   -2304589.9    7019.7451 
+      10    619.66716   -2345543.8            0   -2304533.5    12474.161 
+Loop time of 1.137 on 16 procs for 10 steps with 512000 atoms
+
+Performance: 0.760 ns/day, 31.583 hours/ns, 8.795 timesteps/s
+545.3% CPU use with 2 MPI tasks x 8 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.68021    | 0.68522    | 0.69022    |   0.6 | 60.27
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.18875    | 0.20492    | 0.22109    |   3.6 | 18.02
+Output  | 0.0059888  | 0.0087454  | 0.011502   |   2.9 |  0.77
+Modify  | 0.072584   | 0.11919    | 0.1658     |  13.5 | 10.48
+Other   |            | 0.1189     |            |       | 10.46
+
+Nlocal:    256000 ave 256000 max 256000 min
+Histogram: 2 0 0 0 0 0 0 0 0 0
+Nghost:    47345 ave 47345 max 47345 min
+Histogram: 2 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 2 0 0 0 0 0 0 0 0 0
+FullNghs:  4.096e+06 ave 4.096e+06 max 4.096e+06 min
+Histogram: 2 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8192000
+Ave neighs/atom = 16
+Neighbor list builds = 0
+Dangerous builds = 0
+----------------------------------------------------------
+Using Intel Package without Coprocessor.
+Precision: mixed
+----------------------------------------------------------
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 10
+  Time step   : 0.001
+Memory usage per processor = 1269.92 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+      10    619.66716   -2345543.8            0   -2304533.5    12474.162 
+    2430     488.0511     -2336843            0   -2304543.3   -3111.1936 
+Loop time of 318.613 on 16 procs for 2420 steps with 512000 atoms
+
+Performance: 0.656 ns/day, 36.572 hours/ns, 7.595 timesteps/s
+543.6% CPU use with 2 MPI tasks x 8 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 185.75     | 186.49     | 187.23     |   5.4 | 58.53
+Neigh   | 8.6464     | 8.7153     | 8.7842     |   2.3 |  2.74
+Comm    | 52.132     | 54.113     | 56.095     |  26.9 | 16.98
+Output  | 0.007796   | 0.0084391  | 0.0090821  |   0.7 |  0.00
+Modify  | 32.718     | 34.314     | 35.909     |  27.2 | 10.77
+Other   |            | 34.97      |            |       | 10.98
+
+Nlocal:    256000 ave 256122 max 255878 min
+Histogram: 1 0 0 0 0 0 0 0 0 1
+Nghost:    44168 ave 44180 max 44156 min
+Histogram: 1 0 0 0 0 0 0 0 0 1
+Neighs:    0 ave 0 max 0 min
+Histogram: 2 0 0 0 0 0 0 0 0 0
+FullNghs:  4.21818e+06 ave 4.22117e+06 max 4.21519e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 1
+
+Total # of neighbors = 8436367
+Ave neighs/atom = 16.4773
+Neighbor list builds = 87
+Dangerous builds = 0
+Total wall time: 0:05:20

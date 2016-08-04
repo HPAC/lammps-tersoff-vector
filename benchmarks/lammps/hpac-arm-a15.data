@@ -1,0 +1,27 @@
+-pk omp 0 -sf omp
+Loop time of 64.0012 on 1 procs for 100 steps with 32000 atoms
+Performance: 0.135 ns/day, 177.781 hours/ns, 1.562 timesteps/s
+Loop time of 32.5896 on 2 procs for 100 steps with 32000 atoms
+Performance: 0.265 ns/day, 90.527 hours/ns, 3.068 timesteps/s
+Loop time of 25.7134 on 3 procs for 100 steps with 32000 atoms
+Performance: 0.336 ns/day, 71.426 hours/ns, 3.889 timesteps/s
+Loop time of 21.9756 on 4 procs for 100 steps with 32000 atoms
+Performance: 0.393 ns/day, 61.043 hours/ns, 4.551 timesteps/s
+-pk intel 0 mode double -sf intel
+Loop time of 26.7217 on 1 procs for 100 steps with 32000 atoms
+Performance: 0.323 ns/day, 74.227 hours/ns, 3.742 timesteps/s
+Loop time of 14.0483 on 2 procs for 100 steps with 32000 atoms
+Performance: 0.615 ns/day, 39.023 hours/ns, 7.118 timesteps/s
+Loop time of 10.4866 on 3 procs for 100 steps with 32000 atoms
+Performance: 0.824 ns/day, 29.129 hours/ns, 9.536 timesteps/s
+Loop time of 9.26502 on 4 procs for 100 steps with 32000 atoms
+Performance: 0.933 ns/day, 25.736 hours/ns, 10.793 timesteps/s
+-pk intel 0 mode single -sf intel
+Loop time of 10.0235 on 1 procs for 100 steps with 32000 atoms
+Performance: 0.862 ns/day, 27.843 hours/ns, 9.977 timesteps/s
+Loop time of 5.38632 on 2 procs for 100 steps with 32000 atoms
+Performance: 1.604 ns/day, 14.962 hours/ns, 18.566 timesteps/s
+Loop time of 4.36248 on 3 procs for 100 steps with 32000 atoms
+Performance: 1.981 ns/day, 12.118 hours/ns, 22.923 timesteps/s
+Loop time of 3.85884 on 4 procs for 100 steps with 32000 atoms
+Performance: 2.239 ns/day, 10.719 hours/ns, 25.915 timesteps/s

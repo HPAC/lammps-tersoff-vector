@@ -1,0 +1,88 @@
+LAMMPS (10 Mar 2016)
+KOKKOS mode is enabled (../kokkos.cpp:36)
+  using 1 GPU(s)
+  using 0 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 5.431 5.431 5.431
+Created orthogonal box = (0 0 0) to (217.24 217.24 108.62)
+  1 by 1 by 1 MPI processor grid
+Created 256000 atoms
+Neighbor list info ...
+  1 neighbor list requests
+  update every 1 steps, delay 5 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.2
+  ghost atom cutoff = 4.2
+  binsize = 2.1, bins = 104 104 52
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 0
+  Time step   : 0.001
+Memory usage per processor = 39.7368 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1000   -1185385.5            0     -1152295     7019.632 
+      10    619.39807     -1172763            0   -1152266.8    12479.759 
+Loop time of 0.321984 on 0 procs for 10 steps with 256000 atoms
+
+Performance: 2.683 ns/day, 8.944 hours/ns, 31.057 timesteps/s
+89.1% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.25852    | 0.25852    | 0.25852    |   0.0 | 80.29
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.050461   | 0.050461   | 0.050461   |   0.0 | 15.67
+Output  | 0.00025296 | 0.00025296 | 0.00025296 |   0.0 |  0.08
+Modify  | 0.0055325  | 0.0055325  | 0.0055325  |   0.0 |  1.72
+Other   |            | 0.007218   |            |       |  2.24
+
+Nlocal:    256000 ave 256000 max 256000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    47345 ave 47345 max 47345 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  4.096e+06 ave 4.096e+06 max 4.096e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 4096000
+Ave neighs/atom = 16
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style  : metal
+  Current step: 10
+  Time step   : 0.001
+Memory usage per processor = 39.7368 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+      10    619.39807     -1172763            0   -1152266.8    12479.759 
+    2430    488.63041   -1168441.5            0   -1152272.5   -3148.8813 
+Loop time of 119.908 on 0 procs for 2420 steps with 256000 atoms
+
+Performance: 1.744 ns/day, 13.764 hours/ns, 20.182 timesteps/s
+86.7% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 80.493     | 80.493     | 80.493     |   0.0 | 67.13
+Neigh   | 20.523     | 20.523     | 20.523     |   0.0 | 17.12
+Comm    | 17.055     | 17.055     | 17.055     |   0.0 | 14.22
+Output  | 0.00028491 | 0.00028491 | 0.00028491 |   0.0 |  0.00
+Modify  | 1.3004     | 1.3004     | 1.3004     |   0.0 |  1.08
+Other   |            | 0.5365     |            |       |  0.45
+
+Nlocal:    256000 ave 256000 max 256000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    44107 ave 44107 max 44107 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  4.21803e+06 ave 4.21803e+06 max 4.21803e+06 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 4218028
+Ave neighs/atom = 16.4767
+Neighbor list builds = 84
+Dangerous builds = 0
+Total wall time: 0:02:05
