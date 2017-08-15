@@ -70,7 +70,7 @@ void PairBuckCoulLongIntel::compute(int eflag, int vflag)
 
 template <class flt_t, class acc_t>
 void PairBuckCoulLongIntel::compute(int eflag, int vflag,
-				    IntelBuffers<flt_t,acc_t> *buffers,
+				    IntelBuffers<flt_t,acc_t> *buffers_,
 				    const ForceConst<flt_t> &fc)
 {
   if (eflag || vflag) {
@@ -83,6 +83,7 @@ void PairBuckCoulLongIntel::compute(int eflag, int vflag,
   const int offload_end = fix->offload_end_pair();
   const int ago = neighbor->ago;
 
+  IntelBuffers<flt_t,acc_t> *buffers = buffers_;
   if (ago != 0 && fix->separate_buffers() == 0) {
     fix->start_watch(TIME_PACK);
     #if defined(_OPENMP)

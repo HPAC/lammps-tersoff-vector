@@ -148,7 +148,7 @@ struct lmp_intel_an_bvec {
 namespace lmp_intel {
 
 // Self explanatory mostly, KNC=IMCI and AVX-512, NONE=Scalar, AN=Array Not.
-enum CalculationMode { KNC, AVX, AVX2, SSE, NONE, AN, NEON };
+enum CalculationMode { KNC, AVX, AVX2, SSE, NONE, AN, NEON, ALTIVEC };
 #ifdef __MIC__
   #ifdef LMP_INTEL_VECTOR_MIC
   static const CalculationMode mode = LMP_INTEL_VECTOR_MIC;
@@ -174,7 +174,12 @@ enum CalculationMode { KNC, AVX, AVX2, SSE, NONE, AN, NEON };
             #ifdef __ARM_NEON__
             static const CalculationMode mode = NEON;
             #else 
-            static const CalculationMode mode = NONE;
+              #ifdef __ALTIVEC__
+              static const CalculationMode mode = ALTIVEC;
+              #else
+              #warning "No suitable vector instruction set detected."
+              static const CalculationMode mode = NONE;
+              #endif
             #endif
           #endif
         #endif
@@ -2379,6 +2384,8 @@ struct vector_ops<double, NEON> {
 };
 
 #endif
+
+#include "intel_intrinsics_power8.h"
 
 #ifdef __cilk
 // Array notation implementation

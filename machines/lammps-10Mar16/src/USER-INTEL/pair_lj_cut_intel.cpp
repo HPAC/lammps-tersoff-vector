@@ -74,6 +74,8 @@ void PairLJCutIntel::compute(int eflag, int vflag,
 
   if (ago != 0 && fix->separate_buffers() == 0) {
     fix->start_watch(TIME_PACK);
+    IntelBuffers<flt_t,acc_t> *buffers_ = buffers;
+    IntelBuffers<flt_t,acc_t> *buffers = buffers_;
     if (ago != 0) {
       #if defined(_OPENMP)
       #pragma omp parallel default(none) shared(eflag,vflag,buffers,fc)

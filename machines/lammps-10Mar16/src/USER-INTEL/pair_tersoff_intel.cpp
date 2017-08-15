@@ -58,7 +58,6 @@
 #pragma offload_attribute(push,target(mic))
 #endif
 
-#pragma GCC diagnostic ignored "-fpermissive"
 #include "intel_intrinsics.h"
 #include "math_const.h"
 
@@ -88,7 +87,7 @@ PairTersoffIntel::PairTersoffIntel(LAMMPS *lmp) : PairTersoff(lmp)
 void PairTersoffIntel::compute(int eflag, int vflag)
 {
   if (fix->precision()==FixIntel::PREC_MODE_MIXED) {
-    #ifdef __ARM_NEON__
+    #if defined(__ARM_NEON__) || defined(__ALTIVEC__)
     error->all(FLERR,"Mixed precision is not supported on ARM");
     #else
     compute<float,double>(eflag, vflag, fix->get_mixed_buffers(), 
@@ -124,6 +123,8 @@ void PairTersoffIntel::compute(int eflag, int vflag,
 
   if (ago != 0 && fix->separate_buffers() == 0) {
     fix->start_watch(TIME_PACK);
+    IntelBuffers<flt_t,acc_t> *buffers_ = buffers;
+    IntelBuffers<flt_t,acc_t> *buffers = buffers_;
     #if defined(_OPENMP)
     #pragma omp parallel default(none) shared(eflag,vflag,buffers,fc)
     #endif
@@ -157,7 +158,6 @@ void PairTersoffIntel::compute(int eflag, int vflag,
 #pragma offload_attribute(push, target(mic))
 #endif
 
-#pragma GCC diagnostic ignored "-fpermissive"
 // The complete Tersoff computation kernel is encapsulated here
 //  everything is static, the class just serves as a unit of organization
 template<class flt_t, class acc_t, lmp_intel::CalculationMode mic, bool pack_i>
@@ -1142,9 +1142,9 @@ void IntelKernelTersoff<flt_t,acc_t,mic, pack_i>::kernel(
   iarr vcnumneigh = {0};
   int neighbuf[(v::VL + 1) * N_PERATOM];
   flt_t cutsqmax = 0.0;
-  for (int i = 1; i <= ntypes; i++) {
-    for (int j = 1; j <= ntypes; j++) {
-      for (int k = 1; k <= ntypes; k++) {
+  for (int i = 1; i < ntypes; i++) {
+    for (int j = 1; j < ntypes; j++) {
+      for (int k = 1; k < ntypes; k++) {
         flt_t cutsq = c_inner[i * ntypes * ntypes + j * ntypes + k].cutsq;
         if (cutsqmax < cutsq) cutsqmax = cutsq;
       }
@@ -1440,7 +1440,7 @@ void IntelKernelTersoff<flt_t,acc_t,mic, pack_i>::attractive_vector(
   fvec varg3 = varg1 * varg1 * varg1;
   bvec mask_ex = v::cmpeq(vppowermint, fvec(3.));
   fvec varg  = v::blend(mask_ex, varg1, varg3);
-  fvec vex_delr = min(fvec(1.e30), exp(varg));
+  fvec vex_delr = v::min(fvec(1.e30), exp(varg));
   fvec vex_delr_d_factor = v::blend(mask_ex, v_1_0, fvec(3.0) * varg1 * varg1);
   fvec vex_delr_d = vplam3 * vex_delr_d_factor * vex_delr;
   bvec vmask_need_sine = v::cmpnle(vrik, vpbigr - vpbigd) & mask;
@@ -1460,12 +1460,12 @@ void IntelKernelTersoff<flt_t,acc_t,mic, pack_i>::attractive_vector(
   if (ZETA) *zeta = vfc * vgijk * vex_delr;
 
   fvec vminus_costheta = - vcostheta;
-  fvec vdcosdrjx = vrijinv * fmadd(vminus_costheta, vrij_hatx, rik_hatx);
-  fvec vdcosdrjy = vrijinv * fmadd(vminus_costheta, vrij_haty, rik_haty);
-  fvec vdcosdrjz = vrijinv * fmadd(vminus_costheta, vrij_hatz, rik_hatz);
-  fvec vdcosdrkx = rikinv * fmadd(vminus_costheta, rik_hatx, vrij_hatx);
-  fvec vdcosdrky = rikinv * fmadd(vminus_costheta, rik_haty, vrij_haty);
-  fvec vdcosdrkz = rikinv * fmadd(vminus_costheta, rik_hatz, vrij_hatz);
+  fvec vdcosdrjx = vrijinv * v::fmadd(vminus_costheta, vrij_hatx, rik_hatx);
+  fvec vdcosdrjy = vrijinv * v::fmadd(vminus_costheta, vrij_haty, rik_haty);
+  fvec vdcosdrjz = vrijinv * v::fmadd(vminus_costheta, vrij_hatz, rik_hatz);
+  fvec vdcosdrkx = rikinv * v::fmadd(vminus_costheta, rik_hatx, vrij_hatx);
+  fvec vdcosdrky = rikinv * v::fmadd(vminus_costheta, rik_haty, vrij_haty);
+  fvec vdcosdrkz = rikinv * v::fmadd(vminus_costheta, rik_hatz, vrij_hatz);
   fvec vdcosdrix = -(vdcosdrjx + vdcosdrkx);
   fvec vdcosdriy = -(vdcosdrjy + vdcosdrky);
   fvec vdcosdriz = -(vdcosdrjz + vdcosdrkz);
