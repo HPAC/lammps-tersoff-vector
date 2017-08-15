@@ -250,70 +250,80 @@ inline void sincos_ps(v4sf x, v4sf *ysin, v4sf *ycos) { // any x
   out = vec_insert(cos(vec_extract(x, 2)), out, 2);
   out = vec_insert(cos(vec_extract(x, 3)), out, 3);
   *ycos = out;
-//  v4sf xmm1, xmm2, xmm3, y;
-//
-//  v4su emm2;
-//  
-//  v4su sign_mask_sin, sign_mask_cos;
-//  sign_mask_sin = vcltq_f32(x, vdupq_n_f32(0));
-//  x = vabsq_f32(x);
-//
-//  /* scale by 4/Pi */
-//  y = vmulq_f32(x, vdupq_n_f32(c_cephes_FOPI));
-//
-//  /* store the integer part of y in mm0 */
-//  emm2 = vcvtq_u32_f32(y);
-//  /* j=(j+1) & (~1) (see the cephes sources) */
-//  emm2 = vaddq_u32(emm2, vdupq_n_u32(1));
-//  emm2 = vandq_u32(emm2, vdupq_n_u32(~1));
-//  y = vcvtq_f32_u32(emm2);
-//
-//  /* get the polynom selection mask 
-//     there is one polynom for 0 <= x <= Pi/4
-//     and another one for Pi/4<x<=Pi/2
-//
-//     Both branches will be computed.
-//  */
-//  v4su poly_mask = vtstq_u32(emm2, vdupq_n_u32(2));
-//  
-//  /* The magic pass: "Extended precision modular arithmetic" 
-//     x = ((x - y * DP1) - y * DP2) - y * DP3; */
-//  xmm1 = vmulq_n_f32(y, c_minus_cephes_DP1);
-//  xmm2 = vmulq_n_f32(y, c_minus_cephes_DP2);
-//  xmm3 = vmulq_n_f32(y, c_minus_cephes_DP3);
-//  x = vaddq_f32(x, xmm1);
-//  x = vaddq_f32(x, xmm2);
-//  x = vaddq_f32(x, xmm3);
-//
-//  sign_mask_sin = veorq_u32(sign_mask_sin, vtstq_u32(emm2, vdupq_n_u32(4)));
-//  sign_mask_cos = vtstq_u32(vsubq_u32(emm2, vdupq_n_u32(2)), vdupq_n_u32(4));
-//
-//  /* Evaluate the first polynom  (0 <= x <= Pi/4) in y1, 
-//     and the second polynom      (Pi/4 <= x <= 0) in y2 */
-//  v4sf z = vmulq_f32(x,x);
-//  v4sf y1, y2;
-//
-//  y1 = vmulq_n_f32(z, c_coscof_p0);
-//  y2 = vmulq_n_f32(z, c_sincof_p0);
-//  y1 = vaddq_f32(y1, vdupq_n_f32(c_coscof_p1));
-//  y2 = vaddq_f32(y2, vdupq_n_f32(c_sincof_p1));
-//  y1 = vmulq_f32(y1, z);
-//  y2 = vmulq_f32(y2, z);
-//  y1 = vaddq_f32(y1, vdupq_n_f32(c_coscof_p2));
-//  y2 = vaddq_f32(y2, vdupq_n_f32(c_sincof_p2));
-//  y1 = vmulq_f32(y1, z);
-//  y2 = vmulq_f32(y2, z);
-//  y1 = vmulq_f32(y1, z);
-//  y2 = vmulq_f32(y2, x);
-//  y1 = vsubq_f32(y1, vmulq_f32(z, vdupq_n_f32(0.5f)));
-//  y2 = vaddq_f32(y2, x);
-//  y1 = vaddq_f32(y1, vdupq_n_f32(1));
-//
-//  /* select the correct result from the two polynoms */  
+  return;
+  v4sf xmm1, xmm2, xmm3, y;
+
+  v4su emm2;
+  
+  v4su sign_mask_sin, sign_mask_cos;
+  sign_mask_sin = (v4su) vec_cmplt(x, vec_splats(0.0f));
+  x = vec_abs(x);
+
+  /* scale by 4/Pi */
+  y = vec_mul(x, vec_splats((float) c_cephes_FOPI));
+
+  /* store the integer part of y in mm0 */
+  emm2 = vec_ctu(y, 0);
+  /* j=(j+1) & (~1) (see the cephes sources) */
+  emm2 = vec_add(emm2, vec_splats(1u));
+  emm2 = vec_and(emm2, vec_splats(~1u));
+  y = vec_ctf(emm2, 0);
+
+  /* get the polynom selection mask 
+     there is one polynom for 0 <= x <= Pi/4
+     and another one for Pi/4<x<=Pi/2
+
+     Both branches will be computed.
+  */
+  v4su suzero = vec_splats(0u);
+  // workaround tst and vec_cmpne
+  #define vec_tstq_u32(a, b) vec_nor(suzero, (v4su) vec_cmpeq(suzero, vec_and(a, b)))
+  v4su poly_mask = vec_tstq_u32(emm2, vec_splats(2u));
+  
+  /* The magic pass: "Extended precision modular arithmetic" 
+     x = ((x - y * DP1) - y * DP2) - y * DP3; */
+  xmm1 = vec_mul(y, vec_splats((float) c_minus_cephes_DP1));
+  xmm2 = vec_mul(y, vec_splats((float) c_minus_cephes_DP2));
+  xmm3 = vec_mul(y, vec_splats((float) c_minus_cephes_DP3));
+  x = vec_add(x, xmm1);
+  x = vec_add(x, xmm2);
+  x = vec_add(x, xmm3);
+
+  sign_mask_sin = vec_xor(sign_mask_sin, vec_tstq_u32(emm2, vec_splats(4u)));
+  sign_mask_cos = vec_tstq_u32(vec_sub(emm2, vec_splats(2u)), vec_splats(4u));
+
+  /* Evaluate the first polynom  (0 <= x <= Pi/4) in y1, 
+     and the second polynom      (Pi/4 <= x <= 0) in y2 */
+  v4sf z = vec_mul(x,x);
+  v4sf y1, y2;
+
+  y1 = vec_mul(z, vec_splats((float) c_coscof_p0));
+  y2 = vec_mul(z, vec_splats((float) c_sincof_p0));
+  y1 = vec_add(y1, vec_splats((float) c_coscof_p1));
+  y2 = vec_add(y2, vec_splats((float) c_sincof_p1));
+  y1 = vec_mul(y1, z);
+  y2 = vec_mul(y2, z);
+  y1 = vec_add(y1, vec_splats((float) c_coscof_p2));
+  y2 = vec_add(y2, vec_splats((float) c_sincof_p2));
+  y1 = vec_mul(y1, z);
+  y2 = vec_mul(y2, z);
+  y1 = vec_mul(y1, z);
+  y2 = vec_mul(y2, x);
+  y1 = vec_sub(y1, vec_mul(z, vec_splats(0.5f)));
+  y2 = vec_add(y2, x);
+  y1 = vec_add(y1, vec_splats(1.0f));
+
+  /* select the correct result from the two polynoms */  
+  // gcc workaround for vec_neg
+  #define vec_negq_f32(a) vec_sub(vec_splats(0.0f), a)
+  v4sf ys = vec_sel(y2, y1, poly_mask);
+  v4sf yc = vec_sel(y1, y2, poly_mask);
+  *ysin = vec_sel(ys, vec_negq_f32(ys), sign_mask_sin);
+  *ycos = vec_sel(vec_negq_f32(yc), yc, sign_mask_cos);
 //  v4sf ys = vbslq_f32(poly_mask, y1, y2);
 //  v4sf yc = vbslq_f32(poly_mask, y2, y1);
-//  *ysin = vbslq_f32(sign_mask_sin, vnegq_f32(ys), ys);
-//  *ycos = vbslq_f32(sign_mask_cos, yc, vnegq_f32(yc));
+//  *ysin = vbslq_f32(sign_mask_sin, vec_neg(ys), ys);
+//  *ycos = vbslq_f32(sign_mask_cos, yc, vec_neg(yc));
 }
 
 inline v4sf sin_ps(v4sf x) {
