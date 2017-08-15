@@ -239,18 +239,18 @@ inline v4sf exp_ps(v4sf x) {
    sincos_ps..
   */
 inline void sincos_ps(v4sf x, v4sf *ysin, v4sf *ycos) { // any x
-  v4sf out;
-  out = vec_insert(sin(vec_extract(x, 0)), out, 0);
-  out = vec_insert(sin(vec_extract(x, 1)), out, 1);
-  out = vec_insert(sin(vec_extract(x, 2)), out, 2);
-  out = vec_insert(sin(vec_extract(x, 3)), out, 3);
-  *ysin = out;
-  out = vec_insert(cos(vec_extract(x, 0)), out, 0);
-  out = vec_insert(cos(vec_extract(x, 1)), out, 1);
-  out = vec_insert(cos(vec_extract(x, 2)), out, 2);
-  out = vec_insert(cos(vec_extract(x, 3)), out, 3);
-  *ycos = out;
-  return;
+  //v4sf out;
+  //out = vec_insert(sin(vec_extract(x, 0)), out, 0);
+  //out = vec_insert(sin(vec_extract(x, 1)), out, 1);
+  //out = vec_insert(sin(vec_extract(x, 2)), out, 2);
+  //out = vec_insert(sin(vec_extract(x, 3)), out, 3);
+  //*ysin = out;
+  //out = vec_insert(cos(vec_extract(x, 0)), out, 0);
+  //out = vec_insert(cos(vec_extract(x, 1)), out, 1);
+  //out = vec_insert(cos(vec_extract(x, 2)), out, 2);
+  //out = vec_insert(cos(vec_extract(x, 3)), out, 3);
+  //*ycos = out;
+  //return;
   v4sf xmm1, xmm2, xmm3, y;
 
   v4su emm2;
