@@ -42,6 +42,9 @@ action intel_buffers.cpp
 action math_extra_intel.h
 action intel_simd.h pair_sw_intel.cpp
 action intel_intrinsics.h pair_tersoff_intel.cpp
+action intel_intrinsics_power8.h intel_intrinsics.h
+action vector_math_neon.h intel_intrinsics.h
+action vector_math_altivec.h intel_intrinsics.h
 
 # step 2: handle cases and tasks not handled in step 1.
 
