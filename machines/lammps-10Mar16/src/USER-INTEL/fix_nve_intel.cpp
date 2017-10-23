@@ -47,6 +47,15 @@ FixNVEIntel::~FixNVEIntel()
   memory->destroy(_dtfm);
 }
 
+/* ---------------------------------------------------------------------- */
+
+void FixNVEIntel::setup(int vflag)
+{
+  FixNVE::setup(vflag);
+  _nlocal3 = 3 * atom->nlocal;
+  if (atom->ntypes > 1) reset_dt();
+}
+
 /* ----------------------------------------------------------------------
    allow for both per-type and per-atom mass
 ------------------------------------------------------------------------- */
@@ -61,7 +70,6 @@ void FixNVEIntel::initial_integrate(int vflag)
 
   if (igroup == 0 && atom->ntypes == 1 && !atom->rmass) {
     const double dtfm = dtf / atom->mass[1];
-    _nlocal3 = 3 * atom->nlocal;
     #if defined(LMP_SIMD_COMPILER)
     #pragma vector aligned
     #pragma simd
@@ -71,7 +79,6 @@ void FixNVEIntel::initial_integrate(int vflag)
       x[i] += dtv * v[i];
     }
   } else if (igroup == 0) {
-    if (neighbor->ago == 0) reset_dt();
     #if defined(LMP_SIMD_COMPILER)
     #pragma vector aligned
     #pragma simd
@@ -81,7 +88,6 @@ void FixNVEIntel::initial_integrate(int vflag)
       x[i] += dtv * v[i];
     }
   } else {
-   if (neighbor->ago == 0) reset_dt();
     #if defined(LMP_SIMD_COMPILER)
     #pragma vector aligned
     #pragma simd
@@ -104,6 +110,7 @@ void FixNVEIntel::final_integrate()
   const double * _noalias const f = atom->f[0];
 
   if (igroup == 0 && atom->ntypes == 1 && !atom->rmass) {
+    _nlocal3 = 3 * atom->nlocal;
     const double dtfm = dtf / atom->mass[1];
     #if defined(LMP_SIMD_COMPILER)
     #pragma vector aligned
@@ -112,6 +119,7 @@ void FixNVEIntel::final_integrate()
     for (int i = 0; i < _nlocal3; i++)
       v[i] += dtfm * f[i];
   } else {
+    if (neighbor->ago == 0) reset_dt();
     #if defined(LMP_SIMD_COMPILER)
     #pragma vector aligned
     #pragma simd

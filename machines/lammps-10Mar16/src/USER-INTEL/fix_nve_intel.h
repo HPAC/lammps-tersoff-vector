@@ -32,6 +32,7 @@ class FixNVEIntel : public FixNVE {
  public:
   FixNVEIntel(class LAMMPS *, int, char **);
   virtual ~FixNVEIntel();
+  virtual void setup(int);
   virtual void initial_integrate(int);
   virtual void final_integrate();
   virtual void reset_dt();
