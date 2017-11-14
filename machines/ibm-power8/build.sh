@@ -3,6 +3,7 @@
 module purge
 module load tbb
 module load compiler/gcc-5.3.0
+module load mpi/openmpi-cuda-2.1
 
 set -o verbose
 cp -r ../lammps-10Mar16 .
