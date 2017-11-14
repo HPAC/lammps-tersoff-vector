@@ -1,0 +1,103 @@
+# LAMMPS input file
+
+processors * * * grid numa
+
+units metal
+atom_style atomic
+
+boundary p p p
+
+
+lattice       diamond  5.43094977345
+region        simbox  prism 0 3 0 3 0 3 0 0 0 units lattice
+create_box    1 simbox
+create_atoms  1 box
+mass          1 28.0855
+
+# size control
+variable  rx index 1
+variable  ry index 1
+variable  rz index 1
+replicate ${rx} ${ry} ${rz}
+
+variable pot_file index Si_adj.tersoff
+variable pot_name index Si
+
+variable result_file index results.log
+
+variable linear_temp_cutoff index 700
+
+variable linear_offset equal $(263.85 - 0.16568 * v_linear_temp_cutoff + 0.0025061 * v_linear_temp_cutoff^2 - 2.2261e-6 * v_linear_temp_cutoff^3 - 5.0875e-11 * v_linear_temp_cutoff^4 + 8.1956e-13 * v_linear_temp_cutoff^5)
+
+variable R_adj equal 2.7
+variable D_adj equal 0.1
+print "Si Si Si 3 1 0 100390 16.217 -0.59825 0.78734 1.1E-06    1.7322  471.18  ${R_adj}  ${D_adj}  2.4799  1830.8" file ${pot_file}
+
+pair_style tersoff
+pair_coeff * * ${pot_file} ${pot_name}
+
+timestep 0.00025 # 0.25fs
+
+# for absolute zero temperature
+fix      1 all box/relax tri 0.0
+minimize 0 1e-10 1000 100000
+unfix    1
+
+variable V0 index $(vol)
+variable V  equal $(v_V0)
+
+thermo 1000
+
+variable Treal index 0 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2200 2400 2600 2800 3000
+label tempLoop
+
+  if $(v_Treal <= v_linear_temp_cutoff) then &
+    "variable TMD equal $(263.85 - 0.16568 * v_Treal + 0.0025061 * v_Treal^2 - 2.2261e-6 * v_Treal^3 - 5.0875e-11 * v_Treal^4 + 8.1956e-13 * v_Treal^5)" &
+  else &
+    "variable TMD equal $(v_Treal + (v_linear_offset - v_linear_temp_cutoff))"
+  variable temp equal ${TMD}
+  velocity all create ${temp} 42 mom yes rot yes
+  
+  fix ensemble all npt temp ${temp} ${temp} 0.1 tri 0.0 0.0 1.0
+  
+  label volumeLoop
+    # equilibration
+    run 20000
+
+    # volume sampling
+    variable theVol equal vol
+    fix newV all ave/time 5 20 100 v_theVol ave running
+
+    run 10000
+
+    variable newV equal $(f_newV)
+    unfix newV
+
+    # check if volume is converged
+    variable delta equal $(abs(v_V-v_newV)/abs(v_V))
+    print "Volume convergence is ${delta}"
+    if $(v_delta < 1e-2) then "jump SELF volumeBreak"
+
+    variable V equal $(v_newV)
+    
+    # adjust cutoff
+    variable R_adj equal $(2.7 * (v_V / v_V0)^0.33)
+    variable D_adj equal $(0.1 * (v_V / v_V0)^0.33)
+    print "Si Si Si 3 1 0 100390 16.217 -0.59825 0.78734 1.1E-06    1.7322  471.18  ${R_adj}  ${D_adj}  2.4799  1830.8" file ${pot_file}
+
+    pair_coeff * * ${pot_file} ${pot_name}
+
+  jump SELF volumeLoop
+  label volumeBreak
+  
+  # energy sampling
+  variable totEng equal etotal    
+  fix totEng all ave/time 5 20 100 v_totEng ave running
+  run 10000
+  print "${Treal} $(f_totEng / atoms)" append ${result_file}
+
+  unfix totEng
+  unfix ensemble
+
+  next Treal
+jump SELF tempLoop
